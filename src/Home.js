@@ -48,6 +48,41 @@ const useStyles = (theme) => ({
       },
 });
 
+
+
+const SiteIDCheck=({classes,hanleChange,siteID,submit})=>{
+return(
+    <Container component="main" maxWidth="xs" className="siteBG">
+                    <CssBaseline />
+                    <div className={classes.paper}>
+                        <Typography component="h1" variant="h4">
+                            Enter Side ID
+                        </Typography>
+                        <form className={classes.form} noValidate>
+                            <TextField
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                fullWidth
+                                id="siteID"
+                                label="Site ID"
+                                name="siteID"
+                                onChange={hanleChange}
+                                value={siteID}
+                            />
+                            <Button
+                                variant="contained"
+                                className={classes.submit}
+                                onClick={submit}
+                            >
+                                Submit
+                            </Button>
+                        </form>
+                    </div>
+                </Container>  
+)
+}
+
 class Home extends Component {
     constructor(props) {
         super(props)
@@ -93,6 +128,9 @@ class Home extends Component {
         firebase.auth().signOut();
         localStorage.clear()
     }
+    // componentDidUpdate(){
+    //     th
+    // }
     render() {
         const { classes } = this.props;
         return (
@@ -106,35 +144,8 @@ class Home extends Component {
                     </Toolbar>
                 </AppBar>
 
-                <Container component="main" maxWidth="xs" className="siteBG">
-                    <CssBaseline />
-                    <div className={classes.paper}>
-                        <Typography component="h1" variant="h4">
-                            Enter Side ID
-                        </Typography>
-                        <form className={classes.form} noValidate>
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                id="siteID"
-                                label="Site ID"
-                                name="siteID"
-                                onChange={this.hanleChange}
-                                value={this.state.siteID}
-                            />
-                            <Button
-                                variant="contained"
-                                className={classes.submit}
-                                onClick={this.submit}
-                            >
-                                Submit
-                            </Button>
-                        </form>
-                    </div>
-                </Container>
-                {this.state.isValid ? (<Form siteData={this.state.siteObj} />) : null}
+                {this.state.isValid ? (<Form siteDATA = {this.siteObj} isValid= {this.state.isValid}/>):(<SiteIDCheck classes = {classes} hanleChange = {this.hanleChange} siteID = {this.state.siteID} submit={this.submit}/>)}
+                         
             </div>
 
         )
