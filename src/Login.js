@@ -52,7 +52,7 @@ class Login extends Component {
         db.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
             console.log(u.user.email, u.user.uid)
             localStorage.setItem("email", u.user.email)
-            localStorage.setItem("uuid", u.user.uid)
+            localStorage.setItem("uid", u.user.uid)
         }).catch(err => {
             console.log(err)
         })
@@ -108,11 +108,11 @@ class Login extends Component {
                                 value={this.state.password}
                             />
                             <Button
-                                type="submit"
                                 fullWidth
                                 variant="contained"
                                 color="primary"
                                 className={classes.submit}
+                                onClick={this.login}
                             >
                                 Sign In
                             </Button>
