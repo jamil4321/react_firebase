@@ -28,7 +28,13 @@ const useStyles =theme => ({
     },
     submit: {
       margin: theme.spacing(3, 0, 2),
-      backgroundColor: '#9CB83C;'
+      backgroundColor: '#9CB83C;',
+      borderRadius:'71px',
+      minWidth:'180px',
+      color:'white',
+        '&:hover': {
+            backgroundColor: '#617e04',
+          },
     },
   });
   
@@ -64,7 +70,8 @@ class Login extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div>
+            <div className="App-header">
+                <div className="App">
                 <Container component="main" maxWidth="xs" className="loginBG">
                     <CssBaseline />
                     <div className={classes.paper}>
@@ -97,7 +104,7 @@ class Login extends Component {
                             />
                             <Button
                                 variant="contained"
-                                color="primary"
+                                // fullWidth
                                 className={classes.submit}
                                 onClick={this.login}
                             >
@@ -106,7 +113,7 @@ class Login extends Component {
                         </form>
                     </div>
                 </Container>
-
+                </div>
             </div>
         )
     }
