@@ -16,7 +16,7 @@ import Container from '@material-ui/core/Container';
 
 const useStyles =theme => ({
     paper: {
-      marginTop: theme.spacing(8),
+      marginTop: theme.spacing(1),
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -26,11 +26,12 @@ const useStyles =theme => ({
       backgroundColor: theme.palette.secondary.main,
     },
     form: {
-      width: '100%', // Fix IE 11 issue.
+      width: '95%', // Fix IE 11 issue.
       marginTop: theme.spacing(1),
     },
     submit: {
       margin: theme.spacing(3, 0, 2),
+      backgroundColor: '#9CB83C;'
     },
   });
   
@@ -80,7 +81,7 @@ class Login extends Component {
                         <Avatar className={classes.avatar}>
                             <LockOutlinedIcon />
                         </Avatar>
-                        <Typography component="h1" variant="h5">
+                        <Typography component="h1" variant="h3">
                             Sing In
                         </Typography>
                         <form className={classes.form} noValidate>

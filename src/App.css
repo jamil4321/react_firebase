@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+.loginBG{
+  background-color: white;
+  color: #9CB83C;
+  padding: 12%;
+  border-radius: 10%;
+  background-image: url('./LoginImg.svg') ;
+  background-repeat: no-repeat;
+  background-position: 4% 0%;
+}
+.loginBG h1{
+  margin-bottom: 10%;
+}
