@@ -3,14 +3,11 @@ import db from './firebase';
 import PropTypes from 'prop-types';
 // Theam Import
 
-import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles,withStyles } from '@material-ui/core/styles';
+import {withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 
@@ -68,19 +65,9 @@ class Login extends Component {
         const { classes } = this.props;
         return (
             <div>
-                {/* <form>
-                    <input name="email" type="email" id="email" placeholder="Enter Your Email" onChange={this.hanleChange} value={this.state.email} />
-                    <input name="password" type="password" id="password" placeholder="Enterpassword" onChange={this.hanleChange} value={this.state.password} />
-
-                    <button onClick={this.login}>Login</button>
-
-                </form> */}
                 <Container component="main" maxWidth="xs" className="loginBG">
                     <CssBaseline />
                     <div className={classes.paper}>
-                        {/* <Avatar className={classes.avatar}>
-                            <LockOutlinedIcon />
-                        </Avatar> */}
                         <Typography component="h1" variant="h3">
                             Sing In
                         </Typography>
@@ -109,7 +96,6 @@ class Login extends Component {
                                 value={this.state.password}
                             />
                             <Button
-                                fullWidth
                                 variant="contained"
                                 color="primary"
                                 className={classes.submit}
