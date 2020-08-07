@@ -3,6 +3,7 @@ import firebase from 'firebase';
 import Form from './components/form';
 
 
+
 class Home extends Component {
     constructor(props){
         super(props)
@@ -10,6 +11,7 @@ class Home extends Component {
         this.submit = this.submit.bind(this);
         this.state={
             siteID:"",
+            siteObj:{},
             isValid :false
         }
     }
@@ -23,18 +25,22 @@ class Home extends Component {
         firebase.database().ref('user').once('value',snpashot => {
             let emailID = snpashot.val().filter(user => localStorage.email === user.email)
             let siteAssinged = emailID[0].siteAssinged
-            console.log(siteAssinged)
+
             firebase.database().ref(`SiteDetails/${this.state.siteID}`).once('value',snapshot=>{
                 let siteID = snapshot.val()
-                console.log(siteID)
+                if(siteID){
                  for(var i =0; i < siteAssinged.length;i++){
                      if (siteID.siteID === siteAssinged[i]){
-                         this.setState({isValid:true})
-                     }
+                            this.setState({isValid:true})
+                            this.setState({siteObj:siteID})
+                     }      
                      else{
-                         console.log("you Enter invalid Site ID")
+                         console.log("No Such Id Here!!!")
                      }
                  }
+                }else{
+                    console.log("No Such Id Here!!")
+                }
             })
         })
     }
@@ -46,7 +52,7 @@ class Home extends Component {
                  <input name="siteID" type="Text" id="siteID" placeholder="Enter siteID" onChange={this.hanleChange} value={this.state.siteID}/>
                  <button onClick={this.submit}>submit</button>
                  </form>
-                 {this.state.isValid ? (<Form/>) : null}
+                 {this.state.isValid ? (<Form siteData={this.state.siteObj}/>) : null}
             </div>
         )
     }
