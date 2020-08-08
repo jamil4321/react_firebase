@@ -59,6 +59,7 @@ class Login extends Component {
             localStorage.setItem("uid", u.user.uid)
         }).catch(err => {
             console.log(err)
+            window.alert(err.message)
         })
 
     }

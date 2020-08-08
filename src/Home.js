@@ -14,23 +14,23 @@ import Container from '@material-ui/core/Container';
 const useStyles = (theme) => ({
     root: {
         flexGrow: 1,
-        color: 'white',
-        alignItems: 'center',
-        textAlign: 'center'
+        color:'white',
+        alignItems:'center',
+        textAlign:'center'
     },
     paper: {
         marginTop: theme.spacing(1),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-    },
-    form: {
+      },
+      form: {
         width: '95%', // Fix IE 11 issue.
         marginTop: theme.spacing(1),
-    },
-    navBar: {
-        backgroundColor: '#F3821E',
-        marginBottom: '40px'
+      },
+    navBar:{
+        backgroundColor:'#F3821E',
+        marginBottom:'40px'
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -41,45 +41,45 @@ const useStyles = (theme) => ({
     submit: {
         margin: theme.spacing(1, 0, 2),
         backgroundColor: '#9CB83C;',
-        color: 'white',
+        color:'white',
         '&:hover': {
             backgroundColor: '#617e04',
-        },
-    },
+          },
+      },
 });
 
 
-const SiteIDCheck = ({ classes, hanleChange, siteID, submit }) => {
-    return (
-        <Container component="main" maxWidth="xs" className="siteBG">
-            <CssBaseline />
-            <div className={classes.paper}>
-                <Typography component="h1" variant="h4">
-                    Enter Side ID
+const SiteIDCheck=({classes,hanleChange,siteID,submit})=>{
+return(
+    <Container component="main" maxWidth="xs" className="siteBG">
+                    <CssBaseline />
+                    <div className={classes.paper}>
+                        <Typography component="h1" variant="h4">
+                            Enter Side ID
                         </Typography>
-                <form className={classes.form} noValidate>
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        id="siteID"
-                        label="Site ID"
-                        name="siteID"
-                        onChange={hanleChange}
-                        value={siteID}
-                    />
-                    <Button
-                        variant="contained"
-                        className={classes.submit}
-                        onClick={submit}
-                    >
-                        Submit
+                        <form className={classes.form} noValidate>
+                            <TextField
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                fullWidth
+                                id="siteID"
+                                label="Site ID"
+                                name="siteID"
+                                onChange={hanleChange}
+                                value={siteID}
+                            />
+                            <Button
+                                variant="contained"
+                                className={classes.submit}
+                                onClick={submit}
+                            >
+                                Submit
                             </Button>
-                </form>
-            </div>
-        </Container>
-    )
+                        </form>
+                    </div>
+                </Container>  
+)
 }
 
 class Home extends Component {
@@ -92,7 +92,6 @@ class Home extends Component {
             siteID: "",
             siteObj: {},
             isValid: false,
-            siteIDlog: {}
         }
     }
     hanleChange(e) {
@@ -111,21 +110,18 @@ class Home extends Component {
                 if (siteIDVal) {
                     for (var i = 0; i < siteAssinged.length; i++) {
                         if (siteIDVal.siteID === siteAssinged[i]) {
-                            this.setState({ siteObj: siteIDVal })
-                            firebase.database().ref(`SiteLog/${siteIDVal.siteID}`).once('value', snap => {
-                                let siteLog = snap.val();
-                                console.log(siteLog)
-                            })
+                            this.setState({siteObj:siteIDVal})
                             this.setState({ isValid: true })
+                            break;
                         }
                         else {
-                            console.log("No Such Id Here!!!")
+                            window.alert("No Such Id Here!!!")
                         }
                     }
                 } else {
-                    console.log("No Such Id Here!!")
+                    window.alert("No Such Id Here!!")
                 }
-                console.log(this.state.siteIDlog)
+               
             })
         })
     }
@@ -141,14 +137,15 @@ class Home extends Component {
                 <AppBar position="sticky" alignitems="center" className={classes.navBar} >
                     <Toolbar>
                         <Typography variant="h6" className={classes.title}>
-                            {/* Hello {(localStorage.email).split('@')[0]} */} Hello
+                            Hello
+                            {/* Hello {(localStorage.email).split('@')[0]} */}
                         </Typography>
                         <Button className={classes.submit} onClick={this.logout}>Logout</Button>
                     </Toolbar>
                 </AppBar>
 
-                {this.state.isValid ? (<Form siteDATA={this.state.siteObj} isValid={this.state.isValid} />) : (<SiteIDCheck classes={classes} hanleChange={this.hanleChange} siteID={this.state.siteID} submit={this.submit} />)}
-
+                {this.state.isValid ? (<Form siteDATA = {this.state.siteObj} isValid= {this.state.isValid}/>):(<SiteIDCheck classes = {classes} hanleChange = {this.hanleChange} siteID = {this.state.siteID} submit={this.submit}/>)}
+                         
             </div>
 
         )

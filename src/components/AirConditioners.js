@@ -18,7 +18,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
-
 const useStyles = (theme) => ({
     root: {
         flexGrow: 1,
@@ -84,7 +83,9 @@ class AirConditioners extends Component {
                                     <Grid container spacing={3}>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">AC_Test_Run</FormLabel>
+                                                <FormLabel component="legend">
+                                                    AC_Test_Run
+                                                    </FormLabel>
                                                 <RadioGroup aria-label="AC_Test_Run" name="AC_Test_Run"
                                                     value={AirConditionersProps.AC_Test_Run} onChange={handleChange('AC_Test_Run')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -110,8 +111,9 @@ class AirConditioners extends Component {
                                                 <FormLabel component="legend">IDU Working</FormLabel>
                                                 <RadioGroup aria-label="IDU_Working" name="IDU_Working"
                                                     value={AirConditionersProps.IDU_Working} onChange={handleChange('IDU_Working')} row>
-                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
-                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                    <FormControlLabel value="Both" control={<Radio />} label="Both" />
+                                                    <FormControlLabel value="One" control={<Radio />} label="One" />
+                                                    <FormControlLabel value="None" control={<Radio />} label="None" />
                                                 </RadioGroup>
                                             </FormControl>
                                         </Grid>
