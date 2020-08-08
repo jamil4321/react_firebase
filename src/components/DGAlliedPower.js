@@ -77,7 +77,7 @@ class DGAlliedPower extends Component {
                                     aria-controls="panel1a-content"
                                     id="panel1a-header"
                                 >
-                                    <Typography className={classes.heading}>DGAlliedPower</Typography>
+                                    <Typography className={classes.heading}>Diesel Generator</Typography>
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Grid container spacing={3}>
@@ -155,11 +155,12 @@ class DGAlliedPower extends Component {
 
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">PCB_Functioning</FormLabel>
-                                                <RadioGroup aria-label="PCB_Functioning" name="PCB_Functioning"
-                                                    value={DGAlliedPowerProps.PCB_Functioning} onChange={handleChange('PCB_Functioning')} row>
+                                                <FormLabel component="legend">AF</FormLabel>
+                                                <RadioGroup aria-label="AF" name="AF"
+                                                    value={DGAlliedPowerProps.AF} onChange={handleChange('AF')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
                                                     <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                    <FormControlLabel value="Clean Only" control={<Radio />} label="Clean Only" />
                                                 </RadioGroup>
                                             </FormControl>
                                         </Grid>
@@ -169,18 +170,18 @@ class DGAlliedPower extends Component {
                                                 margin="normal"
                                                 required
                                                 fullWidth
-                                                id="PCB_Functioning_Remarks"
-                                                label="PCB_Functioning_Remarks"
-                                                name="PCB_Functioning_Remarks"
-                                                onChange={handleChange('PCB_Functioning_Remarks')}
-                                                value={DGAlliedPowerProps.PCB_Functioning_Remarks}
+                                                id="AF_Remarks"
+                                                label="AF_Remarks"
+                                                name="AF_Remarks"
+                                                onChange={handleChange('AF_Remarks')}
+                                                value={DGAlliedPowerProps.AF_Remarks}
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Thermostat_Working</FormLabel>
-                                                <RadioGroup aria-label="Thermostat_Working" name="Thermostat_Working"
-                                                    value={DGAlliedPowerProps.Thermostat_Working} onChange={handleChange('Thermostat_Working')} row>
+                                                <FormLabel component="legend">Genset_Electrical_Check</FormLabel>
+                                                <RadioGroup aria-label="Genset_Electrical_Check" name="Genset_Electrical_Check"
+                                                    value={DGAlliedPowerProps.Genset_Electrical_Check} onChange={handleChange('Genset_Electrical_Check')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
                                                     <FormControlLabel value="No" control={<Radio />} label="No" />
                                                 </RadioGroup>
@@ -192,11 +193,80 @@ class DGAlliedPower extends Component {
                                                 margin="normal"
                                                 required
                                                 fullWidth
-                                                id="Thermostat_Working_Remarks"
-                                                label="Thermostat_Working_Remarks"
-                                                name="Thermostat_Working_Remarks"
-                                                onChange={handleChange('Thermostat_Working_Remarks')}
-                                                value={DGAlliedPowerProps.Thermostat_Working_Remarks}
+                                                id="Genset_Electrical_Check_Remarks"
+                                                label="Genset_Electrical_Check_Remarks"
+                                                name="Genset_Electrical_Check_Remarks"
+                                                onChange={handleChange('Genset_Electrical_Check_Remarks')}
+                                                value={DGAlliedPowerProps.Genset_Electrical_Check_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Genset_Test_Run</FormLabel>
+                                                <RadioGroup aria-label="Genset_Test_Run" name="Genset_Test_Run"
+                                                    value={DGAlliedPowerProps.Genset_Test_Run} onChange={handleChange('Genset_Test_Run')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Genset_Test_Run_Remarks"
+                                                label="Genset_Test_Run_Remarks"
+                                                name="Genset_Test_Run_Remarks"
+                                                onChange={handleChange('Genset_Test_Run_Remarks')}
+                                                value={DGAlliedPowerProps.Genset_Test_Run_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Cylinder_Temp_Check</FormLabel>
+                                                <RadioGroup aria-label="Cylinder_Temp_Check" name="Cylinder_Temp_Check"
+                                                    value={DGAlliedPowerProps.Cylinder_Temp_Check} onChange={handleChange('Cylinder_Temp_Check')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Cylinder_Temp_Check_Remarks"
+                                                label="Cylinder_Temp_Check_Remarks"
+                                                name="Cylinder_Temp_Check_Remarks"
+                                                onChange={handleChange('Cylinder_Temp_Check_Remarks')}
+                                                value={DGAlliedPowerProps.Cylinder_Temp_Check_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Exhaust_System_Inspect</FormLabel>
+                                                <RadioGroup aria-label="Exhaust_System_Inspect" name="Exhaust_System_Inspect"
+                                                    value={DGAlliedPowerProps.Exhaust_System_Inspect} onChange={handleChange('Exhaust_System_Inspect')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Exhaust_System_Inspect_Remarks"
+                                                label="Exhaust_System_Inspect_Remarks"
+                                                name="Exhaust_System_Inspect_Remarks"
+                                                onChange={handleChange('Exhaust_System_Inspect_Remarks')}
+                                                value={DGAlliedPowerProps.Exhaust_System_Inspect_Remarks}
                                             />
                                         </Grid>
                                     </Grid>
