@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import LiveHelpIcon from '@material-ui/icons/LiveHelp';
+import Fab from '@material-ui/core/Fab';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
@@ -90,6 +93,11 @@ class AirConditioners extends Component {
                                                     value={AirConditionersProps.AC_Test_Run} onChange={handleChange('AC_Test_Run')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
                                                     <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                    <Tooltip title="Starting and test run of Air Conditioners." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
                                                 </RadioGroup>
                                             </FormControl>
                                         </Grid>
@@ -114,6 +122,11 @@ class AirConditioners extends Component {
                                                     <FormControlLabel value="Both" control={<Radio />} label="Both" />
                                                     <FormControlLabel value="One" control={<Radio />} label="One" />
                                                     <FormControlLabel value="None" control={<Radio />} label="None" />
+                                                    <Tooltip title="Check the both IDU are working properly and producing chilled air with appropriate throw." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
                                                 </RadioGroup>
                                             </FormControl>
                                         </Grid>
@@ -137,6 +150,11 @@ class AirConditioners extends Component {
                                                     value={AirConditionersProps.ODU_Condensing_Unit_Working} onChange={handleChange('ODU_Condensing_Unit_Working')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
                                                     <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                    <Tooltip title="Check the ODU condensing unit is working properly." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
                                                 </RadioGroup>
                                             </FormControl>
                                         </Grid>
@@ -161,6 +179,11 @@ class AirConditioners extends Component {
                                                     value={AirConditionersProps.PCB_Functioning} onChange={handleChange('PCB_Functioning')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
                                                     <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                    <Tooltip title="Check the PCB is functioning properly." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
                                                 </RadioGroup>
                                             </FormControl>
                                         </Grid>
@@ -184,6 +207,12 @@ class AirConditioners extends Component {
                                                     value={AirConditionersProps.Thermostat_Working} onChange={handleChange('Thermostat_Working')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
                                                     <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                    <Tooltip title="Check the thermostat of Air Conditioner is functioning properly. Replace/Calibrate/Adjust thermostat if required." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
+
                                                 </RadioGroup>
                                             </FormControl>
                                         </Grid>
