@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-
+import LiveHelpIcon from '@material-ui/icons/LiveHelp';
+import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -85,7 +86,12 @@ class GroundingLightningArrestor extends Component {
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
                                                     Grounding_Pit_Clean
-                                                    </FormLabel>
+                                                    <Tooltip title="Clean of Grounding Pit " enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
+                                                </FormLabel>
                                                 <RadioGroup aria-label="Grounding_Pit_Clean" name="Grounding_Pit_Clean"
                                                     value={GroundingLightningArrestorProps.Grounding_Pit_Clean} onChange={handleChange('Grounding_Pit_Clean')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -108,7 +114,12 @@ class GroundingLightningArrestor extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Grounding_Pit_Treatment</FormLabel>
+                                                <FormLabel component="legend">Grounding_Pit_Treatment
+                                                <Tooltip title="Watering/Chemical Treatment of Grounding pits" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Grounding_Pit_Treatment" name="Grounding_Pit_Treatment"
                                                     value={GroundingLightningArrestorProps.Grounding_Pit_Treatment} onChange={handleChange('Grounding_Pit_Treatment')} row>
                                                     <FormControlLabel value="Both" control={<Radio />} label="Both" />
@@ -132,7 +143,12 @@ class GroundingLightningArrestor extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Resistenace_Value_Measurement</FormLabel>
+                                                <FormLabel component="legend">Resistenace_Value_Measurement
+                                                <Tooltip title="Measurement of Resistenace values" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Resistenace_Value_Measurement" name="Resistenace_Value_Measurement"
                                                     value={GroundingLightningArrestorProps.Resistenace_Value_Measurement} onChange={handleChange('Resistenace_Value_Measurement')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -156,7 +172,12 @@ class GroundingLightningArrestor extends Component {
 
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend"> Grounding_Cable_Connectivity_Check</FormLabel>
+                                                <FormLabel component="legend"> Grounding_Cable_Connectivity_Check
+                                                <Tooltip title="Check Grounding cable connectivity pit to end nodes" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Grounding_Cable_Connectivity_Check" name="Grounding_Cable_Connectivity_Check"
                                                     value={GroundingLightningArrestorProps.Grounding_Cable_Connectivity_Check} onChange={handleChange('Grounding_Cable_Connectivity_Check')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -179,7 +200,12 @@ class GroundingLightningArrestor extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Cable_Termination_Check</FormLabel>
+                                                <FormLabel component="legend">Cable_Termination_Check
+                                                <Tooltip title="Check & Tighten Cable terminations" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Cable_Termination_Check" name="Cable_Termination_Check"
                                                     value={GroundingLightningArrestorProps.Cable_Termination_Check} onChange={handleChange('Cable_Termination_Check')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -201,8 +227,13 @@ class GroundingLightningArrestor extends Component {
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
-                                        <FormControl component="fieldset">
-                                                <FormLabel component="legend">Busbars_Greasing</FormLabel>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Busbars_Greasing
+                                                <Tooltip title="Greasing of Busbars" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Busbars_Greasing" name="Busbars_Greasing"
                                                     value={GroundingLightningArrestorProps.Busbars_Greasing} onChange={handleChange('Busbars_Greasing')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />

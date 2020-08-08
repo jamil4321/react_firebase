@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-
+import LiveHelpIcon from '@material-ui/icons/LiveHelp';
+import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -85,6 +86,11 @@ class CivilWorksElectrification extends Component {
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
                                                     Site_Cleanliness
+                                                    <Tooltip title="Clean site premises (indoor, shelter, external)" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
                                                     </FormLabel>
                                                 <RadioGroup aria-label="Site_Cleanliness" name="Site_Cleanliness"
                                                     value={CivilWorksElectrificationProps.Site_Cleanliness} onChange={handleChange('Site_Cleanliness')} row>
@@ -110,6 +116,11 @@ class CivilWorksElectrification extends Component {
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
                                                     Site_Locks
+                                                    <Tooltip title="Check and ensue main door, shelter locks, handles" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
                                                     </FormLabel>
                                                 <RadioGroup aria-label="Site_Locks" name="Site_Locks"
                                                     value={CivilWorksElectrificationProps.Site_Locks} onChange={handleChange('Site_Locks')} row>
@@ -136,6 +147,11 @@ class CivilWorksElectrification extends Component {
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
                                                     Cable_Routing_Conduits_Ducts
+                                                    <Tooltip title="Check and ensue cable routing, cable conduits, ducts" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
                                                     </FormLabel>
                                                 <RadioGroup aria-label="Cable_Routing_Conduits_Ducts" name="Cable_Routing_Conduits_Ducts"
                                                     value={CivilWorksElectrificationProps.Cable_Routing_Conduits_Ducts} onChange={handleChange('Cable_Routing_Conduits_Ducts')} row>
