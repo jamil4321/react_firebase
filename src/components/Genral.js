@@ -381,11 +381,11 @@ class Genral extends Component {
                                         variant="outlined"
                                         required
                                         fullWidth
-                                        id="Last_Pmr_Date"
-                                        label="Last_Pmr_Date"
-                                        name="Last_Pmr_Date"
-                                        onChange={handleChange('Last_Pmr_Date')}
-                                        value={GenralProps.Last_Pmr_Date}
+                                        id="Filled_Quantity"
+                                        label="Filled_Quantity"
+                                        name="Filled_Quantity"
+                                        onChange={handleChange('Filled_Quantity')}
+                                        value={GenralProps.Filled_Quantity}
                                     />
                                 </Grid>
                                 <Grid item xs={12} sm={6} md={3}>
@@ -393,15 +393,129 @@ class Genral extends Component {
                                         variant="outlined"
                                         required
                                         fullWidth
-                                        id="Fuel_By"
-                                        label="PMR_By"
-                                        name="PMR_By"
-                                        onChange={handleChange('PMR_By')}
-                                        value={GenralProps.PMR_By}
+                                        id="Avail_Quanitity"
+                                        label="Avail_Quanitity"
+                                        name="Avail_Quanitity"
+                                        onChange={handleChange('Avail_Quanitity')}
+                                        value={GenralProps.Avail_Quanitity}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={3}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="Curr_GHMR"
+                                        label="Curr_GHMR"
+                                        name="Curr_GHMR"
+                                        onChange={handleChange('Curr_GHMR')}
+                                        value={GenralProps.Curr_GHMR}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={3}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="Prev_GHMR"
+                                        label="Prev_GHMR"
+                                        name="Prev_GHMR"
+                                        onChange={handleChange('Prev_GHMR')}
+                                        value={GenralProps.Prev_GHMR}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={3}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="Visit_Type"
+                                        label="Visit_Type"
+                                        name="Visit_Type"
+                                        onChange={handleChange('Visit_Type')}
+                                        value={GenralProps.Visit_Type}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={3}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="Fuel_Cap"
+                                        label="Fuel_Cap"
+                                        name="Fuel_Cap"
+                                        onChange={handleChange('Fuel_Cap')}
+                                        value={GenralProps.Fuel_Cap}
                                     />
                                 </Grid>
                             </Grid>
 
+                            <Typography component="h4" variant="h6" style={{ margin: '20px 0px' }}>
+                            Last Parts Changed Details
+                                    </Typography>
+                            <Grid container spacing={3}>
+                                
+                                <Grid item xs={12} sm={6} md={6}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="Last_Part_Changed_Date"
+                                        label="Last_Part_Changed_Date"
+                                        name="Last_Part_Changed_Date"
+                                        onChange={handleChange('Last_Part_Changed_Date')}
+                                        value={GenralProps.Last_Part_Changed_Date}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={6}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="Last_Part_Changed_By"
+                                        label="Last_Part_Changed_By"
+                                        name="Last_Part_Changed_By"
+                                        onChange={handleChange('Last_Part_Changed_By')}
+                                        value={GenralProps.Last_Part_Changed_By}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={4}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="Oil_Filter"
+                                        label="Oil_Filter"
+                                        name="Oil_Filter"
+                                        onChange={handleChange('Oil_Filter')}
+                                        value={GenralProps.Oil_Filter}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={4}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="Fuel_Filter"
+                                        label="Fuel_Filter"
+                                        name="Fuel_Filter"
+                                        onChange={handleChange('Fuel_Filter')}
+                                        value={GenralProps.Fuel_Filter}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={4}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="Oil"
+                                        label="Oil"
+                                        name="Oil"
+                                        onChange={handleChange('Oil')}
+                                        value={GenralProps.Oil}
+                                    />
+                                </Grid>
+                            </Grid>
 
 
                             <Button

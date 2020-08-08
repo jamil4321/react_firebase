@@ -161,6 +161,10 @@ class Form extends Component {
             [input]: e.target.value
         });
     };
+    submit(e){
+        firebase.database().ref(`SiteDetails/${localStorage.siteID}`).set(this.state)
+        localStorage.removeItem('siteID')
+    }
 
     render() {
         const { step } = this.state;
@@ -213,8 +217,8 @@ class Form extends Component {
             case 6:
                 return (
                     <CivilWorksElectrification
-                        SCivilWorksElectrificationProps={this.state}
-                        nextStep={this.nextStep}
+                        CivilWorksElectrificationProps={this.state}
+                        submit={this.submit}
                         prevStep={this.prevStep}
                         handleChange={this.handleChange}
                     />

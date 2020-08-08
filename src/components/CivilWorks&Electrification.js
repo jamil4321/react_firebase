@@ -61,7 +61,7 @@ const useStyles = (theme) => ({
 
 class CivilWorksElectrification extends Component {
     render() {
-        const { handleChange, CivilWorksElectrificationProps, nextStep, classes, prevStep } = this.props;
+        const { handleChange, CivilWorksElectrificationProps, submit, classes, prevStep } = this.props;
         return (
             <div>
                 <Container component="main" maxWidth="md" className="siteBG">
@@ -172,9 +172,9 @@ class CivilWorksElectrification extends Component {
                             <Button
                                 variant="contained"
                                 className={classes.submit}
-                                onClick={nextStep}
+                                onClick={submit}
                             >
-                                Next
+                                Submit
                             </Button>
                         </form>
                     </div>

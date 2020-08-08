@@ -112,6 +112,7 @@ class Home extends Component {
                         if (siteIDVal.siteID === siteAssinged[i]) {
                             this.setState({siteObj:siteIDVal})
                             this.setState({ isValid: true })
+                            localStorage.setItem('siteID',siteIDVal.siteID)
                             break;
                         }
                         else {
