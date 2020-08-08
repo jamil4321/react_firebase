@@ -195,7 +195,7 @@ class Form extends Component {
             case 4:
                 return (
                     <KVSwitchgearTransformerCP
-                        SwitchgearTransformerCPProps={this.state}
+                        KVSwitchgearTransformerCPProps={this.state}
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
                         handleChange={this.handleChange}

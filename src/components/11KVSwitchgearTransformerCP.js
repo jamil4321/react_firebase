@@ -224,6 +224,295 @@ class KVSwitchgearTransformerCP extends Component {
                                     </Grid>
                                 </AccordionDetails>
                             </Accordion>
+                            <Accordion>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <Typography className={classes.heading}>Transformer</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Grid container spacing={3}>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">
+                                                    Transformer_Oil_Checking
+                                                    </FormLabel>
+                                                <RadioGroup aria-label="Transformer_Oil_Checking" name="Transformer_Oil_Checking"
+                                                    value={KVSwitchgearTransformerCPProps.Transformer_Oil_Checking} onChange={handleChange('Transformer_Oil_Checking')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="D_Fuse_C_R_Remarks"
+                                                label="D_Fuse_C_R_Remarks"
+                                                name="D_Fuse_C_R_Remarks"
+                                                onChange={handleChange('Transformer_Oil_Checking_Remarks')}
+                                                value={KVSwitchgearTransformerCPProps.Transformer_Oil_Checking_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">GasKit_Checking</FormLabel>
+                                                <RadioGroup aria-label="GasKit_Checking" name="GasKit_Checking"
+                                                    value={KVSwitchgearTransformerCPProps.GasKit_Checking} onChange={handleChange('GasKit_Checking')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="GasKit_Checking_Remarks"
+                                                label="GasKit_Checking_Remarks"
+                                                name="GasKit_Checking_Remarks"
+                                                onChange={handleChange('GasKit_Checking_Remarks')}
+                                                value={KVSwitchgearTransformerCPProps.D_Fuse_Set_C_R_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Nuts_Bolts_connection_Tightening</FormLabel>
+                                                <RadioGroup aria-label="Nuts_Bolts_connection_Tightening" name="Nuts_Bolts_connection_Tightening"
+                                                    value={KVSwitchgearTransformerCPProps.Nuts_Bolts_connection_Tightening} onChange={handleChange('Nuts_Bolts_connection_Tightening')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Nuts_Bolts_connection_Tightening_Remarks"
+                                                label="Nuts_Bolts_connection_Tightening_Remarks"
+                                                name="Nuts_Bolts_connection_Tightening_Remarks"
+                                                onChange={handleChange('Nuts_Bolts_connection_Tightening_Remarks')}
+                                                value={KVSwitchgearTransformerCPProps.Nuts_Bolts_connection_Tightening_Remarks}
+                                            />
+                                        </Grid>
+
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Oil_Dehderation</FormLabel>
+                                                <RadioGroup aria-label="Lt_Cable_C_R" name="Lt_Cable_C_R"
+                                                    value={KVSwitchgearTransformerCPProps.Oil_Dehderation} onChange={handleChange('Oil_Dehderation')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                    <FormControlLabel value="Clean Only" control={<Radio />} label="Clean Only" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Oil_Dehderation_Remarks"
+                                                label="Oil_Dehderation_Remarks"
+                                                name="Oil_Dehderation_Remarks"
+                                                onChange={handleChange('Oil_Dehderation_Remarks')}
+                                                value={KVSwitchgearTransformerCPProps.Oil_Dehderation_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Cable_Connetion_Checking</FormLabel>
+                                                <RadioGroup aria-label="Cable_Connetion_Checking" name="Cable_Connetion_Checking"
+                                                    value={KVSwitchgearTransformerCPProps.Cable_Connetion_Checking} onChange={handleChange('Cable_Connetion_Checking')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Cable_Connetion_Checking_Remarks"
+                                                label="Cable_Connetion_Checking_Remarks"
+                                                name="Cable_Connetion_Checking_Remarks"
+                                                onChange={handleChange('Cable_Connetion_Checking_Remarks')}
+                                                value={KVSwitchgearTransformerCPProps.Cable_Connetion_Checking_Remarks}
+                                            />
+                                        </Grid>
+                                    </Grid>
+                                </AccordionDetails>
+                            </Accordion>
+
+                            <Accordion>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <Typography className={classes.heading}>Comnercial Power Repair</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Grid container spacing={3}>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">
+                                                    D_Fuse_C_R
+                                                    </FormLabel>
+                                                <RadioGroup aria-label="D_Fuse_C_R" name="D_Fuse_C_R"
+                                                    value={KVSwitchgearTransformerCPProps.D_Fuse_C_R} onChange={handleChange('D_Fuse_C_R')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="D_Fuse_C_R_Remarks"
+                                                label="D_Fuse_C_R_Remarks"
+                                                name="D_Fuse_C_R_Remarks"
+                                                onChange={handleChange('D_Fuse_C_R_Remarks')}
+                                                value={KVSwitchgearTransformerCPProps.D_Fuse_C_R_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">D_Fuse_Set_C_R</FormLabel>
+                                                <RadioGroup aria-label="D_Fuse_Set_C_R" name="D_Fuse_Set_C_R"
+                                                    value={KVSwitchgearTransformerCPProps.D_Fuse_Set_C_R} onChange={handleChange('D_Fuse_Set_C_R')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="D_Fuse_Set_C_R_Remarks"
+                                                label="D_Fuse_Set_C_R_Remarks"
+                                                name="D_Fuse_Set_C_R_Remarks"
+                                                onChange={handleChange('D_Fuse_Set_C_R_Remarks')}
+                                                value={KVSwitchgearTransformerCPProps.D_Fuse_Set_C_R_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">HT_Cable_C_R</FormLabel>
+                                                <RadioGroup aria-label="HT_Cable_C_R" name="HT_Cable_C_R"
+                                                    value={KVSwitchgearTransformerCPProps.HT_Cable_C_R} onChange={handleChange('HT_Cable_C_R')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="HT_Cable_C_R_Remarks"
+                                                label="HT_Cable_C_R_Remarks"
+                                                name="HT_Cable_C_R_Remarks"
+                                                onChange={handleChange('HT_Cable_C_R_Remarks')}
+                                                value={KVSwitchgearTransformerCPProps.HT_Cable_C_R_Remarks}
+                                            />
+                                        </Grid>
+
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Lt_Cable_C_R</FormLabel>
+                                                <RadioGroup aria-label="Lt_Cable_C_R" name="Lt_Cable_C_R"
+                                                    value={KVSwitchgearTransformerCPProps.Lt_Cable_C_R} onChange={handleChange('Lt_Cable_C_R')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                    <FormControlLabel value="Clean Only" control={<Radio />} label="Clean Only" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Lt_Cable_C_R_Remarks"
+                                                label="Lt_Cable_C_R_Remarks"
+                                                name="Lt_Cable_C_R_Remarks"
+                                                onChange={handleChange('Lt_Cable_C_R_Remarks')}
+                                                value={KVSwitchgearTransformerCPProps.Lt_Cable_C_R_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Lt_Cable_Joint_C_R</FormLabel>
+                                                <RadioGroup aria-label="Lt_Cable_Joint_C_R" name="Lt_Cable_Joint_C_R"
+                                                    value={KVSwitchgearTransformerCPProps.Lt_Cable_Joint_C_R} onChange={handleChange('Lt_Cable_Joint_C_R')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Lt_Cable_Joint_C_R_Remarks"
+                                                label="Lt_Cable_Joint_C_R_Remarks"
+                                                name="Lt_Cable_Joint_C_R_Remarks"
+                                                onChange={handleChange('Lt_Cable_Joint_C_R_Remarks')}
+                                                value={KVSwitchgearTransformerCPProps.Lt_Cable_Joint_C_R_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Ht_Cable_Joint_C_R</FormLabel>
+                                                <RadioGroup aria-label="Ht_Cable_Joint_C_R" name="Ht_Cable_Joint_C_R"
+                                                    value={KVSwitchgearTransformerCPProps.Ht_Cable_Joint_C_R} onChange={handleChange('Ht_Cable_Joint_C_R')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Ht_Cable_Joint_C_R_Remarks"
+                                                label="Ht_Cable_Joint_C_R_Remarks"
+                                                name="Ht_Cable_Joint_C_R_Remarks"
+                                                onChange={handleChange('Ht_Cable_Joint_C_R_Remarks')}
+                                                value={KVSwitchgearTransformerCPProps.Ht_Cable_Joint_C_R_Remarks}
+                                            />
+                                        </Grid>
+
+                                    </Grid>
+                                </AccordionDetails>
+                            </Accordion>
 
                             <Button
                                 variant="contained"
