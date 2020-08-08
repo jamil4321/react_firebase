@@ -68,7 +68,7 @@ class CivilWorksElectrification extends Component {
                     <CssBaseline />
                     <div className={classes.paper}>
                         <Typography component="h1" variant="h4">
-                        Civil Works & Electrification
+                            Civil Works & Electrification
                         </Typography>
                         <form className={classes.form} noValidate>
                             <Accordion>
@@ -84,7 +84,7 @@ class CivilWorksElectrification extends Component {
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
-                                                Site_Cleanliness
+                                                    Site_Cleanliness
                                                     </FormLabel>
                                                 <RadioGroup aria-label="Site_Cleanliness" name="Site_Cleanliness"
                                                     value={CivilWorksElectrificationProps.Site_Cleanliness} onChange={handleChange('Site_Cleanliness')} row>
@@ -105,11 +105,11 @@ class CivilWorksElectrification extends Component {
                                                 onChange={handleChange('Site_Cleanliness_Remarks')}
                                                 value={CivilWorksElectrificationProps.AC_Test_Run_Remarks}
                                             />
-                                        </Grid>   
+                                        </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
-                                                Site_Locks
+                                                    Site_Locks
                                                     </FormLabel>
                                                 <RadioGroup aria-label="Site_Locks" name="Site_Locks"
                                                     value={CivilWorksElectrificationProps.Site_Locks} onChange={handleChange('Site_Locks')} row>
@@ -130,12 +130,12 @@ class CivilWorksElectrification extends Component {
                                                 onChange={handleChange('Site_Locks_Remarks')}
                                                 value={CivilWorksElectrificationProps.Site_Locks_Remarks}
                                             />
-                                        </Grid> 
+                                        </Grid>
 
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
-                                                Cable_Routing_Conduits_Ducts
+                                                    Cable_Routing_Conduits_Ducts
                                                     </FormLabel>
                                                 <RadioGroup aria-label="Cable_Routing_Conduits_Ducts" name="Cable_Routing_Conduits_Ducts"
                                                     value={CivilWorksElectrificationProps.Cable_Routing_Conduits_Ducts} onChange={handleChange('Cable_Routing_Conduits_Ducts')} row>
@@ -156,7 +156,7 @@ class CivilWorksElectrification extends Component {
                                                 onChange={handleChange('Cable_Routing_Conduits_Ducts_Remarks')}
                                                 value={CivilWorksElectrificationProps.Cable_Routing_Conduits_Ducts_Remarks}
                                             />
-                                        </Grid>                            
+                                        </Grid>
                                     </Grid>
                                 </AccordionDetails>
                             </Accordion>
@@ -172,7 +172,7 @@ class CivilWorksElectrification extends Component {
                             <Button
                                 variant="contained"
                                 className={classes.submit}
-                                onClick={submit}
+                                onClick={() => { this.submit() }}
                             >
                                 Submit
                             </Button>
