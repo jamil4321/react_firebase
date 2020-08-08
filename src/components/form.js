@@ -12,6 +12,7 @@ class Form extends Component {
     siteData = this.props.siteDATA;
     state = {
         step: 1,
+        siteID:this.siteData.siteID,
         Address: this.siteData.Address,
         Category: this.siteData.Category,
         DG_Count: this.siteData.DG_Count,
@@ -161,9 +162,10 @@ class Form extends Component {
             [input]: e.target.value
         });
     };
-    submit(e){
+    submit=(e)=>{
         firebase.database().ref(`SiteDetails/${localStorage.siteID}`).set(this.state)
         localStorage.removeItem('siteID')
+        console.log(this.props.isValid)
     }
 
     render() {
