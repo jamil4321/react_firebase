@@ -88,16 +88,17 @@ class AirConditioners extends Component {
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
                                                     AC_Test_Run
-                                                    </FormLabel>
-                                                <RadioGroup aria-label="AC_Test_Run" name="AC_Test_Run"
-                                                    value={AirConditionersProps.AC_Test_Run} onChange={handleChange('AC_Test_Run')} row>
-                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
-                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
                                                     <Tooltip title="Starting and test run of Air Conditioners." enterTouchDelay="50" aria-label="add">
 
                                                         <LiveHelpIcon style={{ fontSize: 20 }} />
 
                                                     </Tooltip>
+                                                </FormLabel>
+                                                <RadioGroup aria-label="AC_Test_Run" name="AC_Test_Run"
+                                                    value={AirConditionersProps.AC_Test_Run} onChange={handleChange('AC_Test_Run')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+
                                                 </RadioGroup>
                                             </FormControl>
                                         </Grid>
@@ -116,17 +117,19 @@ class AirConditioners extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">IDU Working</FormLabel>
+                                                <FormLabel component="legend">IDU Working
+                                                <Tooltip title="Check the both IDU are working properly and producing chilled air with appropriate throw." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
+                                                </FormLabel>
                                                 <RadioGroup aria-label="IDU_Working" name="IDU_Working"
                                                     value={AirConditionersProps.IDU_Working} onChange={handleChange('IDU_Working')} row>
                                                     <FormControlLabel value="Both" control={<Radio />} label="Both" />
                                                     <FormControlLabel value="One" control={<Radio />} label="One" />
                                                     <FormControlLabel value="None" control={<Radio />} label="None" />
-                                                    <Tooltip title="Check the both IDU are working properly and producing chilled air with appropriate throw." enterTouchDelay="50" aria-label="add">
 
-                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
-
-                                                    </Tooltip>
                                                 </RadioGroup>
                                             </FormControl>
                                         </Grid>
@@ -145,16 +148,18 @@ class AirConditioners extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">ODU_Condensing_Unit_Working</FormLabel>
-                                                <RadioGroup aria-label="ODU_Condensing_Unit_Working" name="ODU_Condensing_Unit_Working"
-                                                    value={AirConditionersProps.ODU_Condensing_Unit_Working} onChange={handleChange('ODU_Condensing_Unit_Working')} row>
-                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
-                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
-                                                    <Tooltip title="Check the ODU condensing unit is working properly." enterTouchDelay="50" aria-label="add">
+                                                <FormLabel component="legend">ODU_Condensing_Unit_Working
+                                                <Tooltip title="Check the ODU condensing unit is working properly." enterTouchDelay="50" aria-label="add">
 
                                                         <LiveHelpIcon style={{ fontSize: 20 }} />
 
                                                     </Tooltip>
+                                                </FormLabel>
+                                                <RadioGroup aria-label="ODU_Condensing_Unit_Working" name="ODU_Condensing_Unit_Working"
+                                                    value={AirConditionersProps.ODU_Condensing_Unit_Working} onChange={handleChange('ODU_Condensing_Unit_Working')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+
                                                 </RadioGroup>
                                             </FormControl>
                                         </Grid>
@@ -174,16 +179,17 @@ class AirConditioners extends Component {
 
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">PCB_Functioning</FormLabel>
+                                                <FormLabel component="legend">PCB_Functioning
+                                                <Tooltip title="Check the PCB is functioning properly." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="PCB_Functioning" name="PCB_Functioning"
                                                     value={AirConditionersProps.PCB_Functioning} onChange={handleChange('PCB_Functioning')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
                                                     <FormControlLabel value="No" control={<Radio />} label="No" />
-                                                    <Tooltip title="Check the PCB is functioning properly." enterTouchDelay="50" aria-label="add">
 
-                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
-
-                                                    </Tooltip>
                                                 </RadioGroup>
                                             </FormControl>
                                         </Grid>
@@ -202,16 +208,18 @@ class AirConditioners extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Thermostat_Working</FormLabel>
-                                                <RadioGroup aria-label="Thermostat_Working" name="Thermostat_Working"
-                                                    value={AirConditionersProps.Thermostat_Working} onChange={handleChange('Thermostat_Working')} row>
-                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
-                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
-                                                    <Tooltip title="Check the thermostat of Air Conditioner is functioning properly. Replace/Calibrate/Adjust thermostat if required." enterTouchDelay="50" aria-label="add">
+                                                <FormLabel component="legend">Thermostat_Working
+                                                <Tooltip title="Check the thermostat of Air Conditioner is functioning properly. Replace/Calibrate/Adjust thermostat if required." enterTouchDelay="50" aria-label="add">
 
                                                         <LiveHelpIcon style={{ fontSize: 20 }} />
 
                                                     </Tooltip>
+                                                </FormLabel>
+                                                <RadioGroup aria-label="Thermostat_Working" name="Thermostat_Working"
+                                                    value={AirConditionersProps.Thermostat_Working} onChange={handleChange('Thermostat_Working')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+
 
                                                 </RadioGroup>
                                             </FormControl>
