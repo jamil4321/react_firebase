@@ -210,10 +210,10 @@ class Genral extends Component {
                                 </Grid>
                             </Grid>
                             <Typography component="h4" variant="h6" style={{ margin: '20px 0px' }}>
-                                    AC 1 Details
+                                AC 1 Details
                                     </Typography>
                             <Grid container spacing={3}>
-                                
+
                                 <Grid item xs={12} sm={6} md={3}>
                                     <TextField
                                         variant="outlined"
@@ -264,10 +264,10 @@ class Genral extends Component {
                                 </Grid>
                             </Grid>
                             <Typography component="h4" variant="h6" style={{ margin: '20px 0px' }}>
-                                    AC 2 Details
+                                AC 2 Details
                                     </Typography>
                             <Grid container spacing={3}>
-                                
+
                                 <Grid item xs={12} sm={6} md={3}>
                                     <TextField
                                         variant="outlined"
@@ -317,12 +317,99 @@ class Genral extends Component {
                                     />
                                 </Grid>
                             </Grid>
+                            <Typography component="h4" variant="h6" style={{ margin: '20px 0px' }}>
+                                    Last PMR Details
+                                    </Typography>
+                            <Grid container spacing={3}>
+                                
+                                <Grid item xs={12} sm={6} md={6}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="Last_Pmr_Date"
+                                        label="Last_Pmr_Date"
+                                        name="Last_Pmr_Date"
+                                        onChange={handleChange('Last_Pmr_Date')}
+                                        value={GenralProps.Last_Pmr_Date}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={6}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="PMR_By"
+                                        label="PMR_By"
+                                        name="PMR_By"
+                                        onChange={handleChange('PMR_By')}
+                                        value={GenralProps.PMR_By}
+                                    />
+                                </Grid>
+                            </Grid>
+                            <Typography component="h4" variant="h6" style={{ margin: '20px 0px' }}>
+                            Last Fueling Details
+                                    </Typography>
+                            <Grid container spacing={3}>
+                                
+                                <Grid item xs={12} sm={6} md={3}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="Last_Fuel_Date"
+                                        label="Last_Fuel_Date"
+                                        name="Last_Fuel_Date"
+                                        onChange={handleChange('Last_Fuel_Date')}
+                                        value={GenralProps.Last_Fuel_Date}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={3}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="Fuel_By"
+                                        label="Fuel_By"
+                                        name="Fuel_By"
+                                        onChange={handleChange('Fuel_By')}
+                                        value={GenralProps.Fuel_By}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={3}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="Last_Pmr_Date"
+                                        label="Last_Pmr_Date"
+                                        name="Last_Pmr_Date"
+                                        onChange={handleChange('Last_Pmr_Date')}
+                                        value={GenralProps.Last_Pmr_Date}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={3}>
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="Fuel_By"
+                                        label="PMR_By"
+                                        name="PMR_By"
+                                        onChange={handleChange('PMR_By')}
+                                        value={GenralProps.PMR_By}
+                                    />
+                                </Grid>
+                            </Grid>
+
+
+
                             <Button
                                 variant="contained"
                                 size="large"
                                 className={classes.submit}
                                 onClick={nextStep}
-                                style={{margin:'20px 0px'}}
+                                style={{ margin: '20px 0px' }}
                             >
                                 Next
                             </Button>

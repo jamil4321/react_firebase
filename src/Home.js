@@ -92,7 +92,6 @@ class Home extends Component {
             siteID: "",
             siteObj: {},
             isValid: false,
-            siteIDlog:{}
         }
     }
     hanleChange(e) {
@@ -112,20 +111,17 @@ class Home extends Component {
                     for (var i = 0; i < siteAssinged.length; i++) {
                         if (siteIDVal.siteID === siteAssinged[i]) {
                             this.setState({siteObj:siteIDVal})
-                            firebase.database().ref(`SiteLog/${siteIDVal.siteID}`).once('value',snap=>{
-                                let siteLog = snap.val();
-                                console.log(siteLog)
-                            })
                             this.setState({ isValid: true })
+                            break;
                         }
                         else {
-                            console.log("No Such Id Here!!!")
+                            window.alert("No Such Id Here!!!")
                         }
                     }
                 } else {
-                    console.log("No Such Id Here!!")
+                    window.alert("No Such Id Here!!")
                 }
-                console.log(this.state.siteIDlog)
+               
             })
         })
     }
