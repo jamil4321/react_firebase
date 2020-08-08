@@ -273,6 +273,294 @@ class DGAlliedPower extends Component {
                                 </AccordionDetails>
                             </Accordion>
 
+                            <Accordion>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <Typography className={classes.heading}>Allied Power System</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Grid container spacing={3}>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">
+                                                Cable_Tightness
+                                                    </FormLabel>
+                                                <RadioGroup aria-label="Cable_Tightness" name="Cable_Tightness"
+                                                    value={DGAlliedPowerProps.Cable_Tightness} onChange={handleChange('Cable_Tightness')} row>
+                                                    <FormControlLabel value="OK" control={<Radio />} label="OK" />
+                                                    <FormControlLabel value="NoK" control={<Radio />} label="NoK" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Cable_Tightness_Remarks"
+                                                label="Cable_Tightness_Remarks"
+                                                name="Cable_Tightness_Remarks"
+                                                onChange={handleChange('Cable_Tightness_Remarks')}
+                                                value={DGAlliedPowerProps.Cable_Tightness_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Indication_Lights</FormLabel>
+                                                <RadioGroup aria-label="Indication_Lights" name="Indication_Lights"
+                                                    value={DGAlliedPowerProps.Indication_Lights} onChange={handleChange('Indication_Lights')} row>
+                                                    <FormControlLabel value="OK" control={<Radio />} label="Ok" />
+                                                    <FormControlLabel value="NoK" control={<Radio />} label="NoK" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Indication_Lights_Remarks"
+                                                label="Indication_Lights_Remarks"
+                                                name="Indication_Lights_Remarks"
+                                                onChange={handleChange('Indication_Lights_Remarks')}
+                                                value={DGAlliedPowerProps.Indication_Lights_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Magnetic_Contactor</FormLabel>
+                                                <RadioGroup aria-label="Magnetic_Contactor" name="Magnetic_Contactor"
+                                                    value={DGAlliedPowerProps.Magnetic_Contactor} onChange={handleChange('Magnetic_Contactor')} row>
+                                                    <FormControlLabel value="OK" control={<Radio />} label="OK" />
+                                                    <FormControlLabel value="NoK" control={<Radio />} label="NoK" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Magnetic_Contactor_Remarks"
+                                                label="Magnetic_Contactor_Remarks"
+                                                name="Magnetic_Contactor_Remarks"
+                                                onChange={handleChange('Magnetic_Contactor_Remarks')}
+                                                value={DGAlliedPowerProps.Magnetic_Contactor_Remarks}
+                                            />
+                                        </Grid>
+
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">ATS_MOR_Functionality</FormLabel>
+                                                <RadioGroup aria-label="ATS_MOR_Functionality" name="ATS_MOR_Functionality"
+                                                    value={DGAlliedPowerProps.ATS_MOR_Functionality} onChange={handleChange('ATS_MOR_Functionality')} row>
+                                                    <FormControlLabel value="OK" control={<Radio />} label="Ok" />
+                                                    <FormControlLabel value="NoK" control={<Radio />} label="NoK" />
+                                                    
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="ATS_MOR_Functionality_Remarks"
+                                                label="ATS_MOR_Functionality_Remarks"
+                                                name="ATS_MOR_Functionality_Remarks"
+                                                onChange={handleChange('ATS_MOR_Functionality_Remarks')}
+                                                value={DGAlliedPowerProps.ATS_MOR_Functionality_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">AC_Breaker_Servicing</FormLabel>
+                                                <RadioGroup aria-label="AC_Breaker_Servicing" name="AC_Breaker_Servicing"
+                                                    value={DGAlliedPowerProps.AC_Breaker_Servicing} onChange={handleChange('AC_Breaker_Servicing')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="AC_Breaker_Servicing_Remarks"
+                                                label="AC_Breaker_Servicing_Remarks"
+                                                name="AC_Breaker_Servicing_Remarks"
+                                                onChange={handleChange('AC_Breaker_Servicing_Remarks')}
+                                                value={DGAlliedPowerProps.AC_Breaker_Servicing_Remarks}
+                                            />
+                                        </Grid>
+                                    </Grid>
+                                </AccordionDetails>
+                            </Accordion>
+                            <Accordion>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <Typography className={classes.heading}>Level II Maintenance/Checks</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Grid container spacing={3}>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">
+                                                Valve_Intake_Replacement
+                                                    </FormLabel>
+                                                <RadioGroup aria-label="Valve_Intake_Replacement" name="Valve_Intake_Replacement"
+                                                    value={DGAlliedPowerProps.Valve_Intake_Replacement} onChange={handleChange('Valve_Intake_Replacement')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Valve_Intake_Replacement_Remarks"
+                                                label="Valve_Intake_Replacement_Remarks"
+                                                name="Valve_Intake_Replacement_Remarks"
+                                                onChange={handleChange('Valve_Intake_Replacement_Remarks')}
+                                                value={DGAlliedPowerProps.Valve_Intake_Replacement_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Valve_Exhaust_Replacement</FormLabel>
+                                                <RadioGroup aria-label="Valve_Exhaust_Replacement" name="Valve_Exhaust_Replacement"
+                                                    value={DGAlliedPowerProps.Valve_Exhaust_Replacement} onChange={handleChange('Valve_Exhaust_Replacement')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Valve_Exhaust_Replacement_Remarks"
+                                                label="Valve_Exhaust_Replacement_Remarks"
+                                                name="Valve_Exhaust_Replacement_Remarks"
+                                                onChange={handleChange('Valve_Exhaust_Replacement_Remarks')}
+                                                value={DGAlliedPowerProps.Valve_Exhaust_Replacement_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Magnetic_Contactor</FormLabel>
+                                                <RadioGroup aria-label="Magnetic_Contactor" name="Magnetic_Contactor"
+                                                    value={DGAlliedPowerProps.Magnetic_Contactor} onChange={handleChange('Magnetic_Contactor')} row>
+                                                    <FormControlLabel value="OK" control={<Radio />} label="OK" />
+                                                    <FormControlLabel value="NoK" control={<Radio />} label="NoK" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Magnetic_Contactor_Remarks"
+                                                label="Magnetic_Contactor_Remarks"
+                                                name="Magnetic_Contactor_Remarks"
+                                                onChange={handleChange('Magnetic_Contactor_Remarks')}
+                                                value={DGAlliedPowerProps.Magnetic_Contactor_Remarks}
+                                            />
+                                        </Grid>
+
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Tapper_Clearance</FormLabel>
+                                                <RadioGroup aria-label="Tapper_Clearance" name="Tapper_Clearance"
+                                                    value={DGAlliedPowerProps.Tapper_Clearance} onChange={handleChange('Tapper_Clearance')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                    
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Tapper_Clearance_Remarks"
+                                                label="Tapper_Clearance_Remarks"
+                                                name="Tapper_Clearance_Remarks"
+                                                onChange={handleChange('Tapper_Clearance_Remarks')}
+                                                value={DGAlliedPowerProps.Tapper_Clearance_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Guides_Intake_Replacement</FormLabel>
+                                                <RadioGroup aria-label="Guides_Intake_Replacement" name="Guides_Intake_Replacement"
+                                                    value={DGAlliedPowerProps.Guides_Intake_Replacement} onChange={handleChange('Guides_Intake_Replacement')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Guides_Intake_Replacement_Remarks"
+                                                label="Guides_Intake_Replacement_Remarks"
+                                                name="Guides_Intake_Replacement_Remarks"
+                                                onChange={handleChange('Guides_Intake_Replacement_Remarks')}
+                                                value={DGAlliedPowerProps.Guides_Intake_Replacement_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Piston_Ring_Replacement</FormLabel>
+                                                <RadioGroup aria-label="Piston_Ring_Replacement" name="Piston_Ring_Replacement"
+                                                    value={DGAlliedPowerProps.Piston_Ring_Replacement} onChange={handleChange('Piston_Ring_Replacement')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Piston_Ring_Replacement_Remarks"
+                                                label="Piston_Ring_Replacement_Remarks"
+                                                name="Piston_Ring_Replacement_Remarks"
+                                                onChange={handleChange('Piston_Ring_Replacement_Remarks')}
+                                                value={DGAlliedPowerProps.Piston_Ring_Replacement_Remarks}
+                                            />
+                                        </Grid>
+                                    </Grid>
+                                </AccordionDetails>
+                            </Accordion>
+
                             <Button
                                 variant="contained"
                                 className={classes.submit}
