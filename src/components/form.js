@@ -213,7 +213,7 @@ class Form extends Component {
             case 6:
                 return (
                     <CivilWorksElectrification
-                        SCivilWorksElectrificationProps={this.state}
+                        CivilWorksElectrificationProps={this.state}
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
                         handleChange={this.handleChange}
