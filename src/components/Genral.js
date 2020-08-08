@@ -38,7 +38,7 @@ const useStyles = (theme) => ({
         flexGrow: 1,
     },
     submit: {
-        margin: theme.spacing(1, 0, 2),
+        margin: theme.spacing(3, 2, 2),
         backgroundColor: '#9CB83C;',
         color: 'white',
         '&:hover': {
@@ -49,7 +49,7 @@ const useStyles = (theme) => ({
 
 class Genral extends Component {
     render() {
-        const { handleChange, GenralProps, nextStep, classes } = this.props;
+        const { handleChange, GenralProps, nextStep, classes ,cancel} = this.props;
         return (
 
 
@@ -522,8 +522,17 @@ class Genral extends Component {
                                 variant="contained"
                                 size="large"
                                 className={classes.submit}
+                                onClick={cancel}
+                               
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                variant="contained"
+                                size="large"
+                                className={classes.submit}
                                 onClick={nextStep}
-                                style={{ margin: '20px 0px' }}
+                                
                             >
                                 Next
                             </Button>

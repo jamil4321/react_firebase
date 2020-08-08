@@ -134,6 +134,7 @@ class Home extends Component {
     }
     handleIsValid(){
         this.setState({isValid:false})
+        this.setState({siteID:''})
     }
 
     render() {

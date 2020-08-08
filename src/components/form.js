@@ -162,12 +162,14 @@ class Form extends Component {
             [input]: e.target.value
         });
     };
-    submit=(e)=>{
+    submit=()=>{
         firebase.database().ref(`SiteDetails/${this.state.siteID}`).set(this.state)
         localStorage.removeItem('siteID')
         this.props.isValid()
     }
-
+    cancel=()=>{
+        this.props.isValid()
+    }
     render() {
         const { step } = this.state;
         switch (step) {
@@ -176,6 +178,7 @@ class Form extends Component {
                     <Genral
                         GenralProps={this.state}
                         nextStep={this.nextStep}
+                        cancel={this.cancel}
                         handleChange={this.handleChange}
                     />
                 );

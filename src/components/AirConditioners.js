@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import LiveHelpIcon from '@material-ui/icons/LiveHelp';
-import Fab from '@material-ui/core/Fab';
 import Tooltip from '@material-ui/core/Tooltip';
 
 import Typography from '@material-ui/core/Typography';
