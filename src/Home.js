@@ -141,7 +141,8 @@ class Home extends Component {
                 <AppBar position="sticky" alignitems="center" className={classes.navBar} >
                     <Toolbar>
                         <Typography variant="h6" className={classes.title}>
-                            Hello {(localStorage.email).split('@')[0]}
+                            Hello
+                            {/* Hello {(localStorage.email).split('@')[0]} */}
                         </Typography>
                         <Button className={classes.submit} onClick={this.logout}>Logout</Button>
                     </Toolbar>
