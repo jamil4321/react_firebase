@@ -163,9 +163,10 @@ class Form extends Component {
         });
     };
     submit=(e)=>{
-        firebase.database().ref(`SiteDetails/${localStorage.siteID}`).set(this.state)
+        firebase.database().ref(`SiteDetails/${this.state.siteID}`).set(this.state)
         localStorage.removeItem('siteID')
         console.log(this.props.isValid)
+        this.setState()
     }
 
     render() {
