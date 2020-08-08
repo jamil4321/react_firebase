@@ -39,7 +39,11 @@ class Form extends Component {
         ODU_Condensing_Unit_Working:'No',
         ODU_Condensing_Unit_Working_Remarks:'',
         PCB_Functioning:'No',
-        PCB_Functioning_Remarks:''
+        PCB_Functioning_Remarks:'',
+        Thermostat_Working:'No',
+        Thermostat_Working_Remarks:'',
+
+
 
     }
     nextStep = () => {
