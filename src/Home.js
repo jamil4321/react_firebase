@@ -88,6 +88,7 @@ class Home extends Component {
         this.hanleChange = this.hanleChange.bind(this)
         this.submit = this.submit.bind(this);
         this.logout = this.logout.bind(this);
+        this.handleIsValid = this.handleIsValid.bind(this);
         this.state = {
             siteID: "",
             siteObj: {},
@@ -130,6 +131,9 @@ class Home extends Component {
         firebase.auth().signOut();
         localStorage.clear()
     }
+    handleIsValid(){
+        this.setState({isValid:false})
+    }
 
     render() {
         const { classes } = this.props;
@@ -145,7 +149,7 @@ class Home extends Component {
                     </Toolbar>
                 </AppBar>
 
-                {this.state.isValid ? (<Form siteDATA = {this.state.siteObj} isValid= {this.state.isValid}/>):(<SiteIDCheck classes = {classes} hanleChange = {this.hanleChange} siteID = {this.state.siteID} submit={this.submit}/>)}
+                {this.state.isValid ? (<Form siteDATA = {this.state.siteObj} isValid= {this.handleIsValid}/>):(<SiteIDCheck classes = {classes} hanleChange = {this.hanleChange} siteID = {this.state.siteID} submit={this.submit}/>)}
                          
             </div>
 

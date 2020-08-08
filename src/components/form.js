@@ -165,8 +165,7 @@ class Form extends Component {
     submit=(e)=>{
         firebase.database().ref(`SiteDetails/${this.state.siteID}`).set(this.state)
         localStorage.removeItem('siteID')
-        console.log(this.props.isValid)
-        this.setState()
+        this.props.isValid()
     }
 
     render() {
