@@ -172,7 +172,7 @@ class CivilWorksElectrification extends Component {
                             <Button
                                 variant="contained"
                                 className={classes.submit}
-                                onClick={() => { this.submit() }}
+                                onClick={submit}
                             >
                                 Submit
                             </Button>
