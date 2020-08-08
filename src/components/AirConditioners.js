@@ -78,15 +78,15 @@ class AirConditioners extends Component {
                                     aria-controls="panel1a-content"
                                     id="panel1a-header"
                                 >
-                                <Typography className={classes.heading}>AirConditioners</Typography>
+                                    <Typography className={classes.heading}>AirConditioners</Typography>
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Grid container spacing={3}>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">AC_Test_Run</FormLabel>
-                                                <RadioGroup aria-label="AC_Test_Run" name="AC_Test_Run" 
-                                                value={AirConditionersProps.AC_Test_Run} onChange={handleChange('AC_Test_Run')} row>
+                                                <RadioGroup aria-label="AC_Test_Run" name="AC_Test_Run"
+                                                    value={AirConditionersProps.AC_Test_Run} onChange={handleChange('AC_Test_Run')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
                                                     <FormControlLabel value="No" control={<Radio />} label="No" />
                                                 </RadioGroup>
@@ -103,6 +103,99 @@ class AirConditioners extends Component {
                                                 name="AC_Test_Run_Remarks"
                                                 onChange={handleChange('AC_Test_Run_Remarks')}
                                                 value={AirConditionersProps.AC_Test_Run_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">IDU Working</FormLabel>
+                                                <RadioGroup aria-label="IDU_Working" name="IDU_Working"
+                                                    value={AirConditionersProps.IDU_Working} onChange={handleChange('IDU_Working')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="IDU_Working_Remarks"
+                                                label="IDU_Working_Remarks"
+                                                name="IDU_Working_Remarks"
+                                                onChange={handleChange('IDU_Working_Remarks')}
+                                                value={AirConditionersProps.IDU_Working_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">ODU_Condensing_Unit_Working</FormLabel>
+                                                <RadioGroup aria-label="ODU_Condensing_Unit_Working" name="ODU_Condensing_Unit_Working"
+                                                    value={AirConditionersProps.ODU_Condensing_Unit_Working} onChange={handleChange('ODU_Condensing_Unit_Working')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="ODU_Condensing_Unit_Working_Remarks"
+                                                label="ODU_Condensing_Unit_Working_Remarks"
+                                                name="ODU_Condensing_Unit_Working_Remarks"
+                                                onChange={handleChange('ODU_Condensing_Unit_Working_Remarks')}
+                                                value={AirConditionersProps.ODU_Condensing_Unit_Working_Remarks}
+                                            />
+                                        </Grid>
+
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">PCB_Functioning</FormLabel>
+                                                <RadioGroup aria-label="PCB_Functioning" name="PCB_Functioning"
+                                                    value={AirConditionersProps.PCB_Functioning} onChange={handleChange('PCB_Functioning')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="PCB_Functioning_Remarks"
+                                                label="PCB_Functioning_Remarks"
+                                                name="PCB_Functioning_Remarks"
+                                                onChange={handleChange('PCB_Functioning_Remarks')}
+                                                value={AirConditionersProps.PCB_Functioning_Remarks}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <FormControl component="fieldset">
+                                                <FormLabel component="legend">Thermostat_Working</FormLabel>
+                                                <RadioGroup aria-label="Thermostat_Working" name="Thermostat_Working"
+                                                    value={AirConditionersProps.Thermostat_Working} onChange={handleChange('Thermostat_Working')} row>
+                                                    <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                </RadioGroup>
+                                            </FormControl>
+                                        </Grid>
+                                        <Grid item xs={12} sm={6}>
+                                            <TextField
+                                                variant="outlined"
+                                                margin="normal"
+                                                required
+                                                fullWidth
+                                                id="Thermostat_Working_Remarks"
+                                                label="Thermostat_Working_Remarks"
+                                                name="Thermostat_Working_Remarks"
+                                                onChange={handleChange('Thermostat_Working_Remarks')}
+                                                value={AirConditionersProps.Thermostat_Working_Remarks}
                                             />
                                         </Grid>
                                     </Grid>
