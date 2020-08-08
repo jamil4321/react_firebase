@@ -262,11 +262,7 @@ class KVSwitchgearTransformerCP extends Component {
                                     id="panel1a-header"
                                 >
                                     <Typography className={classes.heading}>Transformer
-                                    <Tooltip title="Checking of Transformer Oil." enterTouchDelay="50" aria-label="add">
-
-                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
-
-                                                    </Tooltip></Typography>
+                                    </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Grid container spacing={3}>
@@ -274,7 +270,12 @@ class KVSwitchgearTransformerCP extends Component {
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
                                                     Transformer_Oil_Checking
-                                                    </FormLabel>
+                                                    <Tooltip title="Checking of Transformer Oil." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
+                                                </FormLabel>
                                                 <RadioGroup aria-label="Transformer_Oil_Checking" name="Transformer_Oil_Checking"
                                                     value={KVSwitchgearTransformerCPProps.Transformer_Oil_Checking} onChange={handleChange('Transformer_Oil_Checking')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -420,11 +421,7 @@ class KVSwitchgearTransformerCP extends Component {
                                     id="panel1a-header"
                                 >
                                     <Typography className={classes.heading}>Comnercial Power Repair
-                                    <Tooltip title="Checking & Replacement of D-fuse " enterTouchDelay="50" aria-label="add">
-
-                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
-
-                                                    </Tooltip></Typography>
+                                    </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Grid container spacing={3}>
@@ -432,7 +429,12 @@ class KVSwitchgearTransformerCP extends Component {
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
                                                     D_Fuse_C_R
-                                                    </FormLabel>
+                                                    <Tooltip title="Checking & Replacement of D-fuse " enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
+                                                </FormLabel>
                                                 <RadioGroup aria-label="D_Fuse_C_R" name="D_Fuse_C_R"
                                                     value={KVSwitchgearTransformerCPProps.D_Fuse_C_R} onChange={handleChange('D_Fuse_C_R')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
