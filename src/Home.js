@@ -49,7 +49,6 @@ const useStyles = (theme) => ({
 });
 
 
-
 const SiteIDCheck=({classes,hanleChange,siteID,submit})=>{
 return(
     <Container component="main" maxWidth="xs" className="siteBG">
@@ -92,7 +91,8 @@ class Home extends Component {
         this.state = {
             siteID: "",
             siteObj: {},
-            isValid: false
+            isValid: false,
+            siteIDlog:{}
         }
     }
     hanleChange(e) {
@@ -107,12 +107,16 @@ class Home extends Component {
             let siteAssinged = emailID[0].siteAssinged
 
             firebase.database().ref(`SiteDetails/${this.state.siteID}`).once('value', snapshot => {
-                let siteID = snapshot.val()
-                if (siteID) {
+                let siteIDVal = snapshot.val()
+                if (siteIDVal) {
                     for (var i = 0; i < siteAssinged.length; i++) {
-                        if (siteID.siteID === siteAssinged[i]) {
+                        if (siteIDVal.siteID === siteAssinged[i]) {
+                            this.setState({siteObj:siteIDVal})
+                            firebase.database().ref(`SiteLog/${siteIDVal.siteID}`).once('value',snap=>{
+                                let siteLog = snap.val();
+                                console.log(siteLog)
+                            })
                             this.setState({ isValid: true })
-                            this.setState({ siteObj: siteID })
                         }
                         else {
                             console.log("No Such Id Here!!!")
@@ -121,6 +125,7 @@ class Home extends Component {
                 } else {
                     console.log("No Such Id Here!!")
                 }
+                console.log(this.state.siteIDlog)
             })
         })
     }
@@ -128,14 +133,12 @@ class Home extends Component {
         firebase.auth().signOut();
         localStorage.clear()
     }
-    // componentDidUpdate(){
-    //     th
-    // }
+
     render() {
         const { classes } = this.props;
         return (
             <div className={classes.root}>
-                <AppBar position="static" alignitems="center" className={classes.navBar} >
+                <AppBar position="sticky" alignitems="center" className={classes.navBar} >
                     <Toolbar>
                         <Typography variant="h6" className={classes.title}>
                             Hello {(localStorage.email).split('@')[0]}
@@ -144,7 +147,7 @@ class Home extends Component {
                     </Toolbar>
                 </AppBar>
 
-                {this.state.isValid ? (<Form siteDATA = {this.siteObj} isValid= {this.state.isValid}/>):(<SiteIDCheck classes = {classes} hanleChange = {this.hanleChange} siteID = {this.state.siteID} submit={this.submit}/>)}
+                {this.state.isValid ? (<Form siteDATA = {this.state.siteObj} isValid= {this.state.isValid}/>):(<SiteIDCheck classes = {classes} hanleChange = {this.hanleChange} siteID = {this.state.siteID} submit={this.submit}/>)}
                          
             </div>
 
