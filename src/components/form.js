@@ -32,7 +32,7 @@ class Form extends Component {
         Serial_Outdoor_AC2: this.siteData.AC_Count[1].Serial_Outdoor,
         Ton_AC2: this.siteData.AC_Count[1].Ton,
         Last_Pmr_Date: this.siteData.Date,
-        PMR_By: this.siteData.Last_Part_Changed_Date,
+        PMR_By: this.siteData.PMR_By,
         Last_Fuel_Date: this.siteData.Date,
         Fuel_By: this.siteData.PMR_By,
         Filled_Quantity: this.siteData.Filled_Quantity,
