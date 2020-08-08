@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import Genral from './Genral';
-import SwitchgearTransformerCP from './11KVSwitchgearTransformerCP';
+import KVSwitchgearTransformerCP from './11KVSwitchgearTransformerCP';
 import AirConditioners from './AirConditioners';
 import CivilWorksElectrification from './CivilWorks&Electrification';
 import DGAlliedPower from './DGAlliedPower';
@@ -194,7 +194,7 @@ class Form extends Component {
                 )
             case 4:
                 return (
-                    <SwitchgearTransformerCP
+                    <KVSwitchgearTransformerCP
                         SwitchgearTransformerCPProps={this.state}
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
