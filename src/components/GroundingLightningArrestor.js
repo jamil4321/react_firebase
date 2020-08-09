@@ -69,7 +69,7 @@ class GroundingLightningArrestor extends Component {
                     <CssBaseline />
                     <div className={classes.paper}>
                         <Typography component="h1" variant="h4">
-                            GroundingLightningArrestor
+                            Grounding Lightning Arrestor
                         </Typography>
                         <form className={classes.form} noValidate>
                             <Accordion>
