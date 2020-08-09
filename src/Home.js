@@ -119,9 +119,11 @@ class Home extends Component {
 
     }
     handleName() {
-        this.setState({
-            name: localStorage.email.split('@')[0]
-        })
+        if (localStorage.email) {
+            this.setState({
+                name: localStorage.email.split('@')[0]
+            })
+        }
     }
     componentDidMount() {
         this.handleName()
@@ -188,6 +190,7 @@ class Home extends Component {
                 <AppBar position="sticky" alignitems="center" className={classes.navBar} >
                     <Toolbar>
                         <Typography variant="h6" className={classes.title}>
+
                             Hello {this.state.name}
                         </Typography>
                         <Button className={classes.submit} onClick={this.logout}>Logout</Button>
