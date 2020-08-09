@@ -109,17 +109,22 @@ class Home extends Component {
             firebase.database().ref(`SiteDetails/${this.state.siteID}`).once('value', snapshot => {
                 let siteIDVal = snapshot.val()
                 if (siteIDVal) {
+                    let flag = false;
                     for (var i = 0; i < siteAssinged.length; i++) {
                         if (siteIDVal.siteID === siteAssinged[i]) {
-                            this.setState({siteObj:siteIDVal})
-                            this.setState({ isValid: true })
-                            this.setState({siteID:''})
+                            flag = true
+                          
 
                             break;
                         }
-                        else {
-                            window.alert("No Such Id Here!!!")
-                        }
+                    }
+                    if(flag === true){
+                        this.setState({siteObj:siteIDVal})
+                        this.setState({isValid: true })
+                        this.setState({siteID:''})
+                    }
+                    else{
+                        window.alert("No Such Id Here!!")
                     }
                 } else {
                     window.alert("No Such Id Here!!")
