@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-
+import LiveHelpIcon from '@material-ui/icons/LiveHelp';
+import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -84,7 +85,12 @@ class KVSwitchgearTransformerCP extends Component {
                                     <Grid container spacing={3}>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Detail_Inspection</FormLabel>
+                                                <FormLabel component="legend">Detail_Inspection
+                                                <Tooltip title=" Detail Inspection & Checking of 11KV switchgear of different make i.e. Siemens, Alstom, Areva, Medinsha etc. installed at MSC/MGW locations will be done bi-annually." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Detail_Inspection" name="Detail_Inspection"
                                                     value={KVSwitchgearTransformerCPProps.Detail_Inspection} onChange={handleChange('Detail_Inspection')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -107,7 +113,12 @@ class KVSwitchgearTransformerCP extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">HT_Panel_Sealed</FormLabel>
+                                                <FormLabel component="legend">HT_Panel_Sealed
+                                                <Tooltip title="Make Sure HT Panel Should be properly Sealed." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="HT_Panel_Sealed" name="HT_Panel_Sealed"
                                                     value={KVSwitchgearTransformerCPProps.HT_Panel_Sealed} onChange={handleChange('HT_Panel_Sealed')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -130,7 +141,12 @@ class KVSwitchgearTransformerCP extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">CC_Connection</FormLabel>
+                                                <FormLabel component="legend">CC_Connection
+                                                <Tooltip title="Cleaning & checking of connection." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="CC_Connection" name="CC_Connection"
                                                     value={KVSwitchgearTransformerCPProps.CC_Connection} onChange={handleChange('CC_Connection')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -154,7 +170,12 @@ class KVSwitchgearTransformerCP extends Component {
 
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Nut_Bolts_Bus_Bar</FormLabel>
+                                                <FormLabel component="legend">Nut_Bolts_Bus_Bar
+                                                <Tooltip title="Checking of Nuts / Bolts & Bus bar Tightening. " enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Nut_Bolts_Bus_Bar" name="Nut_Bolts_Bus_Bar"
                                                     value={KVSwitchgearTransformerCPProps.Nut_Bolts_Bus_Bar} onChange={handleChange('Nut_Bolts_Bus_Bar')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -177,7 +198,12 @@ class KVSwitchgearTransformerCP extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Relay_Checking</FormLabel>
+                                                <FormLabel component="legend">Relay_Checking
+                                                <Tooltip title="Checking of Relays" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Relay_Checking" name="Relay_Checking"
                                                     value={KVSwitchgearTransformerCPProps.Relay_Checking} onChange={handleChange('Relay_Checking')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -200,7 +226,12 @@ class KVSwitchgearTransformerCP extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">HT_Panel_Body_Grounded</FormLabel>
+                                                <FormLabel component="legend">HT_Panel_Body_Grounded
+                                                <Tooltip title="HT panel Should be Body Grounded" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="HT_Panel_Body_Grounded" name="HT_Panel_Body_Grounded"
                                                     value={KVSwitchgearTransformerCPProps.HT_Panel_Body_Grounded} onChange={handleChange('HT_Panel_Body_Grounded')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -230,7 +261,8 @@ class KVSwitchgearTransformerCP extends Component {
                                     aria-controls="panel1a-content"
                                     id="panel1a-header"
                                 >
-                                    <Typography className={classes.heading}>Transformer</Typography>
+                                    <Typography className={classes.heading}>Transformer
+                                    </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Grid container spacing={3}>
@@ -238,7 +270,12 @@ class KVSwitchgearTransformerCP extends Component {
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
                                                     Transformer_Oil_Checking
-                                                    </FormLabel>
+                                                    <Tooltip title="Checking of Transformer Oil." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
+                                                </FormLabel>
                                                 <RadioGroup aria-label="Transformer_Oil_Checking" name="Transformer_Oil_Checking"
                                                     value={KVSwitchgearTransformerCPProps.Transformer_Oil_Checking} onChange={handleChange('Transformer_Oil_Checking')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -261,7 +298,12 @@ class KVSwitchgearTransformerCP extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">GasKit_Checking</FormLabel>
+                                                <FormLabel component="legend">GasKit_Checking
+                                                <Tooltip title="Checking of Transformer Gas Kit." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="GasKit_Checking" name="GasKit_Checking"
                                                     value={KVSwitchgearTransformerCPProps.GasKit_Checking} onChange={handleChange('GasKit_Checking')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -284,7 +326,12 @@ class KVSwitchgearTransformerCP extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Nuts_Bolts_connection_Tightening</FormLabel>
+                                                <FormLabel component="legend">Nuts_Bolts_connection_Tightening
+                                                <Tooltip title="Checking of Transformer Nuts / Bolts & connection tightening." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Nuts_Bolts_connection_Tightening" name="Nuts_Bolts_connection_Tightening"
                                                     value={KVSwitchgearTransformerCPProps.Nuts_Bolts_connection_Tightening} onChange={handleChange('Nuts_Bolts_connection_Tightening')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -308,7 +355,12 @@ class KVSwitchgearTransformerCP extends Component {
 
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Oil_Dehderation</FormLabel>
+                                                <FormLabel component="legend">Oil_Dehderation
+                                                <Tooltip title="Transformer oil Dehyderation" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Lt_Cable_C_R" name="Lt_Cable_C_R"
                                                     value={KVSwitchgearTransformerCPProps.Oil_Dehderation} onChange={handleChange('Oil_Dehderation')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -332,7 +384,12 @@ class KVSwitchgearTransformerCP extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Cable_Connetion_Checking</FormLabel>
+                                                <FormLabel component="legend">Cable_Connetion_Checking
+                                                <Tooltip title="Cleaning and checking of Cable connection." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Cable_Connetion_Checking" name="Cable_Connetion_Checking"
                                                     value={KVSwitchgearTransformerCPProps.Cable_Connetion_Checking} onChange={handleChange('Cable_Connetion_Checking')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -363,7 +420,8 @@ class KVSwitchgearTransformerCP extends Component {
                                     aria-controls="panel1a-content"
                                     id="panel1a-header"
                                 >
-                                    <Typography className={classes.heading}>Comnercial Power Repair</Typography>
+                                    <Typography className={classes.heading}>Comnercial Power Repair
+                                    </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Grid container spacing={3}>
@@ -371,7 +429,12 @@ class KVSwitchgearTransformerCP extends Component {
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
                                                     D_Fuse_C_R
-                                                    </FormLabel>
+                                                    <Tooltip title="Checking & Replacement of D-fuse " enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
+                                                </FormLabel>
                                                 <RadioGroup aria-label="D_Fuse_C_R" name="D_Fuse_C_R"
                                                     value={KVSwitchgearTransformerCPProps.D_Fuse_C_R} onChange={handleChange('D_Fuse_C_R')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -394,7 +457,12 @@ class KVSwitchgearTransformerCP extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">D_Fuse_Set_C_R</FormLabel>
+                                                <FormLabel component="legend">D_Fuse_Set_C_R
+                                                <Tooltip title="Checking & Replacement of D-Fuse set" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="D_Fuse_Set_C_R" name="D_Fuse_Set_C_R"
                                                     value={KVSwitchgearTransformerCPProps.D_Fuse_Set_C_R} onChange={handleChange('D_Fuse_Set_C_R')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -417,7 +485,12 @@ class KVSwitchgearTransformerCP extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">HT_Cable_C_R</FormLabel>
+                                                <FormLabel component="legend">HT_Cable_C_R
+                                                <Tooltip title="Checking & Repairing  of HT cable " enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="HT_Cable_C_R" name="HT_Cable_C_R"
                                                     value={KVSwitchgearTransformerCPProps.HT_Cable_C_R} onChange={handleChange('HT_Cable_C_R')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -441,7 +514,12 @@ class KVSwitchgearTransformerCP extends Component {
 
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Lt_Cable_C_R</FormLabel>
+                                                <FormLabel component="legend">Lt_Cable_C_R
+                                                <Tooltip title="Checking & Repairing of LT cable " enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Lt_Cable_C_R" name="Lt_Cable_C_R"
                                                     value={KVSwitchgearTransformerCPProps.Lt_Cable_C_R} onChange={handleChange('Lt_Cable_C_R')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -465,7 +543,12 @@ class KVSwitchgearTransformerCP extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Lt_Cable_Joint_C_R</FormLabel>
+                                                <FormLabel component="legend">Lt_Cable_Joint_C_R
+                                                <Tooltip title="Checking & Replacement of  LT cable joint " enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Lt_Cable_Joint_C_R" name="Lt_Cable_Joint_C_R"
                                                     value={KVSwitchgearTransformerCPProps.Lt_Cable_Joint_C_R} onChange={handleChange('Lt_Cable_Joint_C_R')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -488,7 +571,12 @@ class KVSwitchgearTransformerCP extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Ht_Cable_Joint_C_R</FormLabel>
+                                                <FormLabel component="legend">Ht_Cable_Joint_C_R
+                                                <Tooltip title="Checking & Replacement of HT cable joint " enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Ht_Cable_Joint_C_R" name="Ht_Cable_Joint_C_R"
                                                     value={KVSwitchgearTransformerCPProps.Ht_Cable_Joint_C_R} onChange={handleChange('Ht_Cable_Joint_C_R')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-
+import LiveHelpIcon from '@material-ui/icons/LiveHelp';
+import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -85,6 +86,11 @@ class DGAlliedPower extends Component {
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
                                                 Lube_Oil_Changed
+                                                <Tooltip title="Change of Lube oil i.e. Complete oil will be drained & change with fresh oil." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
                                                     </FormLabel>
                                                 <RadioGroup aria-label="Lube_Oil_Changed" name="Lube_Oil_Changed"
                                                     value={DGAlliedPowerProps.Lube_Oil_Changed} onChange={handleChange('Lube_Oil_Changed')} row>
@@ -108,7 +114,12 @@ class DGAlliedPower extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">IDU Working</FormLabel>
+                                                <FormLabel component="legend">OF Working
+                                                <Tooltip title="Replacement of Old Oil Filter with New Oil Filter." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Of_Changed" name="Of_Changed"
                                                     value={DGAlliedPowerProps.Of_Changed} onChange={handleChange('Of_Changed')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -131,7 +142,12 @@ class DGAlliedPower extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">FF_Changed</FormLabel>
+                                                <FormLabel component="legend">FF_Changed
+                                                <Tooltip title="Replacement of Fuel Filter will be subjected to physical condition of fuel filter and also to the fuel condition" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="FF_Changed" name="FF_Changed"
                                                     value={DGAlliedPowerProps.FF_Changed} onChange={handleChange('FF_Changed')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -155,7 +171,12 @@ class DGAlliedPower extends Component {
 
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">AF</FormLabel>
+                                                <FormLabel component="legend">AF
+                                                <Tooltip title="Change/Cleaning  of Air Filter will be subjected to the physical condition/ exceeding 750 running hours since last maintenance." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="AF" name="AF"
                                                     value={DGAlliedPowerProps.AF} onChange={handleChange('AF')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -179,7 +200,12 @@ class DGAlliedPower extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Genset_Electrical_Check</FormLabel>
+                                                <FormLabel component="legend">Genset_Electrical_Check
+                                                <Tooltip title="Check Generator for all Electrical Parameters.All parameter should be in Normal Limits." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Genset_Electrical_Check" name="Genset_Electrical_Check"
                                                     value={DGAlliedPowerProps.Genset_Electrical_Check} onChange={handleChange('Genset_Electrical_Check')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -202,7 +228,12 @@ class DGAlliedPower extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Genset_Test_Run</FormLabel>
+                                                <FormLabel component="legend">Genset_Test_Run
+                                                <Tooltip title="Starting and test run of generators." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Genset_Test_Run" name="Genset_Test_Run"
                                                     value={DGAlliedPowerProps.Genset_Test_Run} onChange={handleChange('Genset_Test_Run')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -225,7 +256,12 @@ class DGAlliedPower extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Cylinder_Temp_Check</FormLabel>
+                                                <FormLabel component="legend">Cylinder_Temp_Check
+                                                <Tooltip title="Check & Record Each cylinder temperature during Operation" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Cylinder_Temp_Check" name="Cylinder_Temp_Check"
                                                     value={DGAlliedPowerProps.Cylinder_Temp_Check} onChange={handleChange('Cylinder_Temp_Check')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -248,7 +284,12 @@ class DGAlliedPower extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Exhaust_System_Inspect</FormLabel>
+                                                <FormLabel component="legend">Exhaust_System_Inspect
+                                                <Tooltip title="Inspection of exhaust system for leaks and audio pollution." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Exhaust_System_Inspect" name="Exhaust_System_Inspect"
                                                     value={DGAlliedPowerProps.Exhaust_System_Inspect} onChange={handleChange('Exhaust_System_Inspect')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -287,6 +328,11 @@ class DGAlliedPower extends Component {
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
                                                 Cable_Tightness
+                                                <Tooltip title="Check tightness of each cable clips, terminations, bolts, joints and wiring in Genset Power Panel, ATS, MOR, L.T, DB or any other panel." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
                                                     </FormLabel>
                                                 <RadioGroup aria-label="Cable_Tightness" name="Cable_Tightness"
                                                     value={DGAlliedPowerProps.Cable_Tightness} onChange={handleChange('Cable_Tightness')} row>
@@ -310,7 +356,12 @@ class DGAlliedPower extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Indication_Lights</FormLabel>
+                                                <FormLabel component="legend">Indication_Lights
+                                                <Tooltip title="Check function of all instruments and indication lights on ATS and Generator panel." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Indication_Lights" name="Indication_Lights"
                                                     value={DGAlliedPowerProps.Indication_Lights} onChange={handleChange('Indication_Lights')} row>
                                                     <FormControlLabel value="OK" control={<Radio />} label="Ok" />
@@ -333,7 +384,12 @@ class DGAlliedPower extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Magnetic_Contactor</FormLabel>
+                                                <FormLabel component="legend">Magnetic_Contactor
+                                                <Tooltip title=" Check that magnetic contactors are functioning properly." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Magnetic_Contactor" name="Magnetic_Contactor"
                                                     value={DGAlliedPowerProps.Magnetic_Contactor} onChange={handleChange('Magnetic_Contactor')} row>
                                                     <FormControlLabel value="OK" control={<Radio />} label="OK" />
@@ -357,7 +413,12 @@ class DGAlliedPower extends Component {
 
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">ATS_MOR_Functionality</FormLabel>
+                                                <FormLabel component="legend">ATS_MOR_Functionality
+                                                <Tooltip title="Check ATS and MOR Fucntionality " enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="ATS_MOR_Functionality" name="ATS_MOR_Functionality"
                                                     value={DGAlliedPowerProps.ATS_MOR_Functionality} onChange={handleChange('ATS_MOR_Functionality')} row>
                                                     <FormControlLabel value="OK" control={<Radio />} label="Ok" />
@@ -381,7 +442,12 @@ class DGAlliedPower extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">AC_Breaker_Servicing</FormLabel>
+                                                <FormLabel component="legend">AC_Breaker_Servicing
+                                                <Tooltip title="Servicing of Air Circuit Breakers" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="AC_Breaker_Servicing" name="AC_Breaker_Servicing"
                                                     value={DGAlliedPowerProps.AC_Breaker_Servicing} onChange={handleChange('AC_Breaker_Servicing')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -419,6 +485,11 @@ class DGAlliedPower extends Component {
                                             <FormControl component="fieldset">
                                                 <FormLabel component="legend">
                                                 Valve_Intake_Replacement
+                                                <Tooltip title="Replacement of Valve Intake" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip>
                                                     </FormLabel>
                                                 <RadioGroup aria-label="Valve_Intake_Replacement" name="Valve_Intake_Replacement"
                                                     value={DGAlliedPowerProps.Valve_Intake_Replacement} onChange={handleChange('Valve_Intake_Replacement')} row>
@@ -442,7 +513,12 @@ class DGAlliedPower extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Valve_Exhaust_Replacement</FormLabel>
+                                                <FormLabel component="legend">Valve_Exhaust_Replacement
+                                                <Tooltip title="Replacement of Valve Exhaust" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Valve_Exhaust_Replacement" name="Valve_Exhaust_Replacement"
                                                     value={DGAlliedPowerProps.Valve_Exhaust_Replacement} onChange={handleChange('Valve_Exhaust_Replacement')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -463,33 +539,16 @@ class DGAlliedPower extends Component {
                                                 value={DGAlliedPowerProps.Valve_Exhaust_Replacement_Remarks}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} sm={6}>
-                                            <FormControl component="fieldset">
-                                                <FormLabel component="legend">Magnetic_Contactor</FormLabel>
-                                                <RadioGroup aria-label="Magnetic_Contactor" name="Magnetic_Contactor"
-                                                    value={DGAlliedPowerProps.Magnetic_Contactor} onChange={handleChange('Magnetic_Contactor')} row>
-                                                    <FormControlLabel value="OK" control={<Radio />} label="OK" />
-                                                    <FormControlLabel value="NoK" control={<Radio />} label="NoK" />
-                                                </RadioGroup>
-                                            </FormControl>
-                                        </Grid>
-                                        <Grid item xs={12} sm={6}>
-                                            <TextField
-                                                variant="outlined"
-                                                margin="normal"
-                                                required
-                                                fullWidth
-                                                id="Magnetic_Contactor_Remarks"
-                                                label="Magnetic_Contactor_Remarks"
-                                                name="Magnetic_Contactor_Remarks"
-                                                onChange={handleChange('Magnetic_Contactor_Remarks')}
-                                                value={DGAlliedPowerProps.Magnetic_Contactor_Remarks}
-                                            />
-                                        </Grid>
+                                        
 
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Tapper_Clearance</FormLabel>
+                                                <FormLabel component="legend">Tapper_Clearance
+                                                <Tooltip title="Tappet Clearance of each Intake ad Exhaust Valve as per standard settings." enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Tapper_Clearance" name="Tapper_Clearance"
                                                     value={DGAlliedPowerProps.Tapper_Clearance} onChange={handleChange('Tapper_Clearance')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -513,7 +572,12 @@ class DGAlliedPower extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Guides_Intake_Replacement</FormLabel>
+                                                <FormLabel component="legend">Guides_Intake_Replacement
+                                                <Tooltip title="Replacement of Guides Intake" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Guides_Intake_Replacement" name="Guides_Intake_Replacement"
                                                     value={DGAlliedPowerProps.Guides_Intake_Replacement} onChange={handleChange('Guides_Intake_Replacement')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
@@ -536,7 +600,12 @@ class DGAlliedPower extends Component {
                                         </Grid>
                                         <Grid item xs={12} sm={6}>
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend">Piston_Ring_Replacement</FormLabel>
+                                                <FormLabel component="legend">Piston_Ring_Replacement
+                                                <Tooltip title="Replacement of Piston Rings (If required)" enterTouchDelay="50" aria-label="add">
+
+                                                        <LiveHelpIcon style={{ fontSize: 20 }} />
+
+                                                    </Tooltip></FormLabel>
                                                 <RadioGroup aria-label="Piston_Ring_Replacement" name="Piston_Ring_Replacement"
                                                     value={DGAlliedPowerProps.Piston_Ring_Replacement} onChange={handleChange('Piston_Ring_Replacement')} row>
                                                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
