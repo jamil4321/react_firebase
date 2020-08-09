@@ -86,11 +86,12 @@ class Login extends Component {
         }
     
         this.setState({open:false});
+        
       }
 
     render() {
         const { classes } = this.props;
-        // const alert = <Alert variant="outlined" severity="error" >This is a success alert — check it out!</Alert>;
+       
         return (
             <div className="App-header">
                 <div className="App">

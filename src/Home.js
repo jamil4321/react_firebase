@@ -11,6 +11,12 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Container from '@material-ui/core/Container';
 
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
+
+function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+  }
 const useStyles = (theme) => ({
     root: {
         flexGrow: 1,
@@ -49,9 +55,14 @@ const useStyles = (theme) => ({
 });
 
 
-const SiteIDCheck=({classes,hanleChange,siteID,submit})=>{
+const SiteIDCheck=({classes,hanleChange,siteID,submit,handleClose,open})=>{
 return(
     <Container component="main" maxWidth="xs" className="siteBG">
+        <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
+                        <Alert onClose={handleClose} severity="error">
+                            Invalid ID
+                        </Alert>
+                    </Snackbar>
                     <CssBaseline />
                     <div className={classes.paper}>
                         <Typography component="h1" variant="h4">
@@ -89,10 +100,14 @@ class Home extends Component {
         this.submit = this.submit.bind(this);
         this.logout = this.logout.bind(this);
         this.handleIsValid = this.handleIsValid.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+        this.handleIsValidCancel = this.handleIsValidCancel.bind(this);
         this.state = {
             siteID: "",
             siteObj: {},
             isValid: false,
+            open: false,
+            submited:false,
         }
     }
     hanleChange(e) {
@@ -106,15 +121,13 @@ class Home extends Component {
             let emailID = snpashot.val().filter(user => localStorage.email === user.email)
             let siteAssinged = emailID[0].siteAssinged
 
-            firebase.database().ref(`SiteDetails/${this.state.siteID}`).once('value', snapshot => {
+            firebase.database().ref(`SiteDetails/${this.state.siteID.toUpperCase()}`).once('value', snapshot => {
                 let siteIDVal = snapshot.val()
                 if (siteIDVal) {
                     let flag = false;
                     for (var i = 0; i < siteAssinged.length; i++) {
                         if (siteIDVal.siteID === siteAssinged[i]) {
                             flag = true
-                          
-
                             break;
                         }
                     }
@@ -124,10 +137,10 @@ class Home extends Component {
                         this.setState({siteID:''})
                     }
                     else{
-                        window.alert("No Such Id Here!!")
+                        this.setState({ open: true })
                     }
                 } else {
-                    window.alert("No Such Id Here!!")
+                    this.setState({ open: true })
                 }
                
             })
@@ -140,7 +153,21 @@ class Home extends Component {
     handleIsValid(){
         this.setState({isValid:false})
         this.setState({siteID:''})
+        this.setState({submited:true})
     }
+    handleIsValidCancel(){
+        this.setState({isValid:false})
+        this.setState({siteID:''})
+
+    }
+    handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+    
+        this.setState({open:false});
+        this.setState({submited:false});
+      }
 
     render() {
         const { classes } = this.props;
@@ -155,8 +182,12 @@ class Home extends Component {
                         <Button className={classes.submit} onClick={this.logout}>Logout</Button>
                     </Toolbar>
                 </AppBar>
-
-                {this.state.isValid ? (<Form siteDATA = {this.state.siteObj} isValid= {this.handleIsValid}/>):(<SiteIDCheck classes = {classes} hanleChange = {this.hanleChange} siteID = {this.state.siteID} submit={this.submit}/>)}
+                <Snackbar open={this.state.submited} autoHideDuration={2000} onClose={this.handleClose}>
+                        <Alert onClose={this.handleClose} severity="success">
+                            Data Saved Successfully
+                        </Alert>
+                    </Snackbar>
+                {this.state.isValid ? (<Form siteDATA = {this.state.siteObj} isValid= {this.handleIsValid} IsValidCancel={this.handleIsValidCancel}/>):(<SiteIDCheck classes = {classes} hanleChange = {this.hanleChange} siteID = {this.state.siteID} submit={this.submit} open={this.state.open} handleClose={this.handleClose} />)}
                          
             </div>
 

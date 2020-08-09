@@ -6,10 +6,16 @@ import AirConditioners from './AirConditioners';
 import CivilWorksElectrification from './CivilWorks&Electrification';
 import DGAlliedPower from './DGAlliedPower';
 import GroundingLightningArrestor from './GroundingLightningArrestor';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
 
+function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+  }
 
 class Form extends Component {
     siteData = this.props.siteDATA;
+    open = false
     state = {
         step: 1,
         siteID:this.siteData.siteID,
@@ -165,11 +171,19 @@ class Form extends Component {
     submit=()=>{
         firebase.database().ref(`SiteDetails/${this.state.siteID}`).set(this.state)
         localStorage.removeItem('siteID')
-        this.props.isValid()
+        this.open = true
+        setTimeout(()=>{this.props.isValid()},2000)
     }
     cancel=()=>{
-        this.props.isValid()
+        this.props.IsValidCancel()
     }
+    handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+    
+        this.open=false;
+      }
     render() {
         const { step } = this.state;
         switch (step) {
@@ -221,12 +235,21 @@ class Form extends Component {
                 )
             case 6:
                 return (
+                    <>
+                    <Snackbar open={this.open} autoHideDuration={5000} onClose={this.handleClose}>
+                        <Alert onClose={this.handleClose} severity="error">
+                            This is a success message!
+                           
+                        </Alert>
+                    </Snackbar>
                     <CivilWorksElectrification
                         CivilWorksElectrificationProps={this.state}
                         submit={this.submit}
                         prevStep={this.prevStep}
                         handleChange={this.handleChange}
                     />
+                    </>
+                    
                 )
             default:
                 return (
