@@ -86,7 +86,7 @@ class Login extends Component {
                                 required
                                 fullWidth
                                 id="email"
-                                label="Eamil Address"
+                                label="Email Address"
                                 name="email"
                                 onChange={this.hanleChange}
                                 value={this.state.email}
