@@ -105,7 +105,7 @@ class Login extends Component {
                         <CssBaseline />
                         <div className={classes.paper}>
                             <Typography component="h1" variant="h3">
-                                Sing In
+                                Sign In
                         </Typography>
                             <form className={classes.form} noValidate>
                                 <TextField

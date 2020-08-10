@@ -121,7 +121,7 @@ class Home extends Component {
     handleName() {
         if (localStorage.email) {
             this.setState({
-                name: localStorage.email.split('@')[0]
+                name: localStorage.email.split('@')[0].toUpperCase()
             })
         }
     }
