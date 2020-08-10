@@ -191,7 +191,7 @@ class Home extends Component {
                     <Toolbar>
                         <Typography variant="h6" className={classes.title}>
 
-                            Hello {this.state.name}
+                            HELLO {this.state.name}
                         </Typography>
                         <Button className={classes.submit} onClick={this.logout}>Logout</Button>
                     </Toolbar>
