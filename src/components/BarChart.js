@@ -30,11 +30,11 @@ export const Zones = () => {
                 datasets: [
                     {
                         label: 'Emergency',
-                        backgroundColor: '#FF8C00',
-                        borderColor: '#FF8C00',
+                        backgroundColor: 'red',
+                        borderColor: 'red',
                         borderWidth: 1,
-                        hoverBackgroundColor: '#FFA500',
-                        hoverBorderColor: '#FFA500',
+                        hoverBackgroundColor: '#FF7F7F',
+                        hoverBorderColor: '#FF7F7F',
                         data: [633, 362, 1527, 2522],
                     },
                     {
@@ -76,11 +76,11 @@ export const ShowZones = () => {
             datasets: [
                 {
                     label: 'Emergency',
-                    backgroundColor: '#FF8C00',
-                    borderColor: '#FF8C00',
+                    backgroundColor: 'red',
+                    borderColor: 'red',
                     borderWidth: 1,
-                    hoverBackgroundColor: '#FFA500',
-                    hoverBorderColor: '#FFA500',
+                    hoverBackgroundColor: '#FF7F7F',
+                    hoverBorderColor: '#FF7F7F',
                     data: [[51,102,], 362, 1527, 2522],
                 },
                 {
