@@ -154,6 +154,7 @@ class Home extends Component {
         // const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
         return (
             <div className={classes.root}>
+<<<<<<< HEAD
                 <CssBaseline />
                 <AppBar position="absolute" className={clsx(classes.appBar, this.state.open && classes.appBarShift, classes.navBar)}>
                     <Toolbar className={classes.toolbar}>
@@ -170,6 +171,15 @@ class Home extends Component {
                             Dashboard
           </Typography>
                         <Button onClick={this.logout} className={classes.submit} >Logout</Button>
+=======
+                <AppBar position="sticky" alignitems="center" className={classes.navBar} >
+                    <Toolbar>
+                        <Typography variant="h6" className={classes.title}>
+
+                            Hello {this.state.name}
+                        </Typography>
+                        <Button className={classes.submit} onClick={this.logout}>Logout</Button>
+>>>>>>> parent of b09c865... Update Home.js
                     </Toolbar>
                 </AppBar>
                 <Drawer
