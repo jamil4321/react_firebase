@@ -1,111 +1,45 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import { NetworVisitsPMR, Zones, ShowZones } from './components/BarChart'
-import {
-    CssBaseline,
-    AppBar,
-    Toolbar,
-    Typography,
-    Button,
-    withStyles,
-    Drawer,
-    List,
-    Divider,
-    IconButton,
-    Container,
-    Grid,
-    Paper,
-} from '@material-ui/core';
+import Form from './components/form';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import TextField from '@material-ui/core/TextField';
+import Container from '@material-ui/core/Container';
 
-import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import { mainListItems, secondaryListItems } from './components/ListItems';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
 
-
-const drawerWidth = 240;
-
+function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 const useStyles = (theme) => ({
     root: {
-        display: 'flex',
-    },
-    toolbar: {
-        paddingRight: 24, // keep right padding when drawer closed
-    },
-    toolbarIcon: {
-        display: 'flex',
+        flexGrow: 1,
+        color: 'white',
         alignItems: 'center',
-        justifyContent: 'flex-end',
-        padding: '0 8px',
-        ...theme.mixins.toolbar,
-    },
-    appBar: {
-        zIndex: theme.zIndex.drawer + 1,
-        transition: theme.transitions.create(['width', 'margin'], {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-    },
-    appBarShift: {
-        marginLeft: drawerWidth,
-        width: `calc(100% - ${drawerWidth}px)`,
-        transition: theme.transitions.create(['width', 'margin'], {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    },
-    menuButton: {
-        marginRight: 36,
-    },
-    menuButtonHidden: {
-        display: 'none',
-    },
-    title: {
-        flexGrow: 1,
-    },
-    drawerPaper: {
-        position: 'relative',
-        whiteSpace: 'nowrap',
-        width: drawerWidth,
-        transition: theme.transitions.create('width', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    },
-    drawerPaperClose: {
-        overflowX: 'hidden',
-        transition: theme.transitions.create('width', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-        width: theme.spacing(7),
-        [theme.breakpoints.up('sm')]: {
-            width: theme.spacing(9),
-        },
-    },
-    appBarSpacer: theme.mixins.toolbar,
-    content: {
-        flexGrow: 1,
-        height: '100vh',
-        overflow: 'auto',
-    },
-    container: {
-        paddingTop: theme.spacing(4),
-        paddingBottom: theme.spacing(4),
+        textAlign: 'center'
     },
     paper: {
-        padding: theme.spacing(2),
+        marginTop: theme.spacing(1),
         display: 'flex',
-        overflow: 'auto',
         flexDirection: 'column',
+        alignItems: 'center',
     },
-    fixedHeight: {
-        height: 320,
+    form: {
+        width: '95%', // Fix IE 11 issue.
+        marginTop: theme.spacing(1),
     },
     navBar: {
         backgroundColor: '#F3821E',
         marginBottom: '40px'
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
     },
     title: {
         flexGrow: 1,
@@ -121,14 +55,54 @@ const useStyles = (theme) => ({
 });
 
 
-
+const SiteIDCheck = ({ classes, hanleChange, siteID, submit, handleClose, open }) => {
+    return (
+        <Container component="main" maxWidth="xs" className="siteBG">
+            <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
+                <Alert onClose={handleClose} severity="error">
+                    Invalid ID
+                        </Alert>
+            </Snackbar>
+            <CssBaseline />
+            <div className={classes.paper}>
+                <Typography component="h1" variant="h4">
+                    Enter Side ID
+                        </Typography>
+                <form className={classes.form} noValidate>
+                    <TextField
+                        variant="outlined"
+                        margin="normal"
+                        required
+                        fullWidth
+                        id="siteID"
+                        label="Site ID"
+                        name="siteID"
+                        onChange={hanleChange}
+                        value={siteID}
+                    />
+                    <Button
+                        variant="contained"
+                        className={classes.submit}
+                        onClick={submit}
+                    >
+                        Submit
+                            </Button>
+                </form>
+            </div>
+        </Container>
+    )
+}
 
 class Home extends Component {
     constructor(props) {
         super(props)
+        this.hanleChange = this.hanleChange.bind(this)
+        this.submit = this.submit.bind(this);
         this.logout = this.logout.bind(this);
-        this.handleDrawerOpen = this.handleDrawerOpen.bind(this)
-        this.handleDrawerClose = this.handleDrawerClose.bind(this)
+        this.handleName = this.handleName.bind(this);
+        this.handleIsValid = this.handleIsValid.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+        this.handleIsValidCancel = this.handleIsValidCancel.bind(this);
         this.state = {
             siteID: "",
             siteObj: {},
@@ -138,22 +112,82 @@ class Home extends Component {
             submited: false,
         }
     }
-    handleDrawerOpen() {
-        this.setState({ open: true });
+    hanleChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+
     }
-    handleDrawerClose() {
-        this.setState({ open: false });
+    handleName() {
+        if (localStorage.email) {
+            this.setState({
+                name: localStorage.email.split('@')[0].toUpperCase()
+            })
+        }
+    }
+    componentDidMount() {
+        this.handleName()
+    }
+
+    submit(e) {
+        e.preventDefault();
+        firebase.database().ref('user').once('value', snpashot => {
+            let emailID = snpashot.val().filter(user => localStorage.email === user.email)
+            let siteAssinged = emailID[0].siteAssinged
+
+            firebase.database().ref(`SiteDetails/${this.state.siteID.toUpperCase()}`).once('value', snapshot => {
+                let siteIDVal = snapshot.val()
+                if (siteIDVal) {
+                    let flag = false;
+                    for (var i = 0; i < siteAssinged.length; i++) {
+                        if (siteIDVal.siteID === siteAssinged[i]) {
+                            flag = true
+                            break;
+                        }
+                    }
+                    if (flag === true) {
+                        this.setState({ siteObj: siteIDVal })
+                        this.setState({ isValid: true })
+                        this.setState({ siteID: '' })
+                    }
+                    else {
+                        this.setState({ open: true })
+                    }
+                } else {
+                    this.setState({ open: true })
+                }
+
+            })
+        })
     }
     logout() {
         firebase.auth().signOut();
         localStorage.clear()
     }
+    handleIsValid() {
+        this.setState({ isValid: false })
+        this.setState({ siteID: '' })
+        this.setState({ submited: true })
+    }
+    handleIsValidCancel() {
+        this.setState({ isValid: false })
+        this.setState({ siteID: '' })
+
+    }
+    handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        this.setState({ open: false });
+        this.setState({ submited: false });
+    }
 
     render() {
         const { classes } = this.props;
-        // const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
         return (
             <div className={classes.root}>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <CssBaseline />
                 <AppBar position="absolute" className={clsx(classes.appBar, this.state.open && classes.appBarShift, classes.navBar)}>
@@ -172,64 +206,31 @@ class Home extends Component {
           </Typography>
                         <Button onClick={this.logout} className={classes.submit} >Logout</Button>
 =======
+=======
+>>>>>>> parent of 944784c... sa
                 <AppBar position="sticky" alignitems="center" className={classes.navBar} >
                     <Toolbar>
                         <Typography variant="h6" className={classes.title}>
 
+<<<<<<< HEAD
                             Hello {this.state.name}
                         </Typography>
                         <Button className={classes.submit} onClick={this.logout}>Logout</Button>
 >>>>>>> parent of b09c865... Update Home.js
+=======
+                            HELLO {this.state.name}
+                        </Typography>
+                        <Button className={classes.submit} onClick={this.logout}>Logout</Button>
+>>>>>>> parent of 944784c... sa
                     </Toolbar>
                 </AppBar>
-                <Drawer
-                    variant="permanent"
-                    classes={{
-                        paper: clsx(classes.drawerPaper, !this.state.open && classes.drawerPaperClose),
-                    }}
-                    open={this.state.open}
-                >
-                    <div className={classes.toolbarIcon}>
-                        <IconButton onClick={this.handleDrawerClose}>
-                            <ChevronLeftIcon />
-                        </IconButton>
-                    </div>
-                    <Divider />
-                    <List>{mainListItems}</List>
-                    <Divider />
-                    <List>{secondaryListItems}</List>
+                <Snackbar open={this.state.submited} autoHideDuration={2000} onClose={this.handleClose}>
+                    <Alert onClose={this.handleClose} severity="success">
+                        Data Saved Successfully
+                        </Alert>
+                </Snackbar>
+                {this.state.isValid ? (<Form siteDATA={this.state.siteObj} isValid={this.handleIsValid} IsValidCancel={this.handleIsValidCancel} />) : (<SiteIDCheck classes={classes} hanleChange={this.hanleChange} siteID={this.state.siteID} submit={this.submit} open={this.state.open} handleClose={this.handleClose} />)}
 
-                </Drawer>
-                <main className={classes.content}>
-                    <div className={classes.appBarSpacer} />
-                    <Container maxWidth="lg" className={classes.container}>
-                        <Grid container spacing={3}>
-                            <Grid item xs={12} md={6}>
-                                <Paper>
-                                    <NetworVisitsPMR />
-                                </Paper>
-                            </Grid>
-                            <Grid item xs={12} md={6}>
-                                <Paper>
-                                    <Zones />
-                                </Paper>
-                            </Grid>
-                            <Grid item xs={12} md={6}>
-                                <Paper >
-                                    <ShowZones />
-                                </Paper>
-                            </Grid>
-                            <Grid item xs={12} md={4} lg={3}>
-                                <Paper >
-                                </Paper>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Paper >
-                                </Paper>
-                            </Grid>
-                        </Grid>
-                    </Container>
-                </main>
             </div>
 
         )
