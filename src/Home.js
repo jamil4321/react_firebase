@@ -213,12 +213,16 @@ class Home extends Component {
                         <Typography variant="h6" className={classes.title}>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                             Hello {this.state.name}
                         </Typography>
                         <Button className={classes.submit} onClick={this.logout}>Logout</Button>
 >>>>>>> parent of b09c865... Update Home.js
 =======
                             HELLO {this.state.name}
+=======
+                            Hello {this.state.name}
+>>>>>>> parent of b09c865... Update Home.js
                         </Typography>
                         <Button className={classes.submit} onClick={this.logout}>Logout</Button>
 >>>>>>> parent of 944784c... sa
